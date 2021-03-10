@@ -1,0 +1,104 @@
+{
+    "desayuno" : [{
+        "producto": "Café americano",
+        "precio": "500"
+    },
+    {
+        "producto": "Café con leche",
+        "precio": "700"
+    },
+    {
+        "producto": "Sandwich de jamón y queso",
+        "precio": "1000"
+    },
+    {
+        "producto": "Jugo de frutas natural",
+        "precio": "700",
+        "opciones": [
+            "Fresa",
+            "Naranja",
+            "Frambuesa"
+        ]
+    }
+    ],
+    "almuerzo":[{
+      "producto": "Hamburguesa simple",
+      "precio": "1500",
+      "opciones": [
+          "Res",
+          "Pollo",
+          "Vegetariana"
+      ],
+      "extra":[{
+        "adicional": "Queso",
+        "precio": "300"
+      },
+      {
+        "adicional": "Huevo",
+        "precio": "300"
+      }]
+    },
+    {
+        "producto": "Hamburguesa Doble",
+        "opciones": [
+            "Res",
+            "Pollo",
+            "Vegetariana"
+        ],
+        "precio": "3000",
+        "extra":[{
+          "adicional": "Queso",
+          "precio": "300"
+        },
+        {
+          "adicional": "Huevo",
+          "precio": "300"
+        }]
+      },
+      {
+          "producto": "Papas fritas",
+          "precio": "700"
+      },
+      {
+        "producto": "Aros de cebolla",
+        "precio": "500"
+    },
+    {
+        "producto": "Agua 500ml",
+        "precio": "500",
+        "opciones": [
+            "Con gas",
+            "Sin gas"
+        ]
+    },
+    {
+        "producto": "Agua 750ml",
+        "precio": "700",
+        "opciones": [
+            "Con gas",
+            "Sin gas"
+        ]
+    },
+    {
+        "producto": "Bebida 500ml",
+        "precio": "700",
+        "opciones":[
+            "Coca-cola",
+            "Fanta",
+            "Canada dry"
+        ]
+    },
+    {
+        "producto": "Bebida 750ml",
+        "precio": "1000",
+        "opciones":[
+            "Coca-cola",
+            "Fanta",
+            "Canada dry"
+        ]
+    }
+
+    
+]
+
+}
