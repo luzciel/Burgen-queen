@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+//import './App.css';
+import React from 'react';
 import './firebase';
 import firebase from "firebase/app";
 
@@ -8,21 +8,8 @@ function App() {
   const app = firebase.app();
   console.log(app);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="containe">
+      <h1>todo ok...</h1>
     </div>
   );
 }
