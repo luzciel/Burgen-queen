@@ -9,10 +9,10 @@ import {
 } from "react-router-dom";
 import './firebase';
 import firebase from "firebase/app";
-import Home from './components/Home';
-import Mesas from './components/Mesas';
-import Ordenes from './components/Ordenes';
-import Cocina from './components/Cocina';
+import Home from './components/home/Home';
+import Mesas from './components/tables/Tables';
+import Ordenes from './components/ordens/Ordens';
+import Cocina from './components/kitchen/Kitchen';
 
 
 function App() {
