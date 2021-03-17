@@ -1,3 +1,7 @@
+body{
+    display: flex;
+}
+
 .clientName{
     margin: 50px;
 }
@@ -42,5 +46,13 @@
     height: 38px;
     width: 127px;
     outline: none;
+
+}
+
+.hrOrders{
+    width: 1375px;
+    justify-content: center;
+    margin: 9px -106px 10px;
+
 
 }

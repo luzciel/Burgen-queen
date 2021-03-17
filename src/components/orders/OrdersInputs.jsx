@@ -5,7 +5,8 @@ const orders = () =>{
         <div>
             <input type="text" className="clientName" placeholder="Nombre Cliente"/>
             <input type="text" className="waiterName" placeholder="Garzón" />
-            <input type="text" className="tableNumber" placeholder="Mesa" />
+            <input type="number" className="tableNumber" placeholder="Mesa" />
+            <hr className="hrOrders"></hr>
         </div>
     )
 }
