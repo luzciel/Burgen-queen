@@ -3,7 +3,8 @@ import React from 'react'
 const cocina = () =>{
     return (
         <div>
-            <h1>cocina</h1>
+            <p style={{marginTop: "32px"}}>>cocina</p>
+            <buttom style={{width: "200px"}}>cocina</buttom>
         </div>
     )
 }

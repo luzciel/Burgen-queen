@@ -9,36 +9,36 @@ import {
 } from "react-router-dom";
 import './firebase';
 import firebase from "firebase/app";
-import Home from './components/home/Home';
-import Mesas from './components/tables/Tables';
-import Ordenes from './components/ordens/Ordens';
-import Cocina from './components/kitchen/Kitchen';
-
+import Home from './components/home/Home.jsx';
+import Tables from './components/tables/Tables.jsx';
+import Ordenes from './components/ordens/Ordens.jsx';
+import Cocina from './components/kitchen/Kitchen.jsx';
+import Header from './components/home/Header.jsx';
+import "./components/home/home.css"
 
 function App() {
   const app = firebase.app();
   console.log(app);
   return (
     <Router>
-    <div className="container">
+    <div>
      <div>
-       <NavLink to='/' activeClassName='active'>
+      <Header />
+       {/* <NavLink to='/' activeClassName='active'>
          Home
        </NavLink>
-       <NavLink to='/mesas' activeClassName='active'>
-         Mesas
-       </NavLink>
+       <NavLink to="/mesas" >Mesas</NavLink>
        <NavLink to='/cocina' activeClassName='active'>
          Cocina
-       </NavLink>
+       </NavLink> */}
      </div>
-      <hr/>
+      {/* <hr/> */}
       <Switch>
         <Route path="/" exact>
           <Home />
         </Route>
         <Route path="/mesas">
-          <Mesas />
+          <Tables />
         </Route>
         <Route path="/ordenes">
           <Ordenes />

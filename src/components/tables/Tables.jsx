@@ -1,10 +1,12 @@
 import React from 'react'
 
-const mesas = () =>{
+const Tables = () => {
+    console.log("Mesasssss")
     return (
         <div>
             <h1>Mesasssssss</h1>
+            <buttom style={{width: "200px"}}>MESAS</buttom>
         </div>
     )
 }
-export default mesas
+export default Tables;
