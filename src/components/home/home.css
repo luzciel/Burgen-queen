@@ -76,7 +76,7 @@ nav i {
 
 #log {
     max-width: 10%;
-    margin-top: 2%;
+    margin-top: 0.5%;
     margin-left: 5%;
 }
 
@@ -113,10 +113,8 @@ nav i {
 @media screen and (min-width: 415px)  and (max-width: 1024px){
     .home-body {
         height: 128vh;
-        margin-top: -181px;
-        background-size: 100%;
-        background-repeat: no-repeat;
-        background-color: rebeccapurple;
+        margin-top: 0px;
+        background-size: 113%;
     }
 
 }
