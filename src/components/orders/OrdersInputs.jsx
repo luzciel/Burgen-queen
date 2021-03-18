@@ -1,5 +1,6 @@
 import React from 'react'
-import "./ordersInputs.css"
+import "./Orders.css"
+import MenuButtons from './MenuButtons'
 const orders = () =>{
     return (
         <div>
@@ -7,7 +8,11 @@ const orders = () =>{
             <input type="text" className="waiterName" placeholder="Garzón" />
             <input type="number" className="tableNumber" placeholder="Mesa" />
             <hr className="hrOrders"></hr>
+            
+            <MenuButtons/>
+            
         </div>
+
     )
 }
 

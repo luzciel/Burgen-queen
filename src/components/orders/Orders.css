@@ -1,3 +1,6 @@
+.breakfastButton{
+    margin: 300px;
+}
 .clientName{
     margin: 50px;
 }
@@ -20,7 +23,7 @@
 }
 
 .waiterName{
-    margin: 85px 16px 12px 209px;
+    margin: 85px 16px 12px 130px;
     font-family: 'Poppins', sans-serif;
     border-radius: 5px;
     border: 3px solid #FE7800;
@@ -33,7 +36,7 @@
 }
 
 .tableNumber{
-    margin: 85px 13px 14px 366px;
+    margin: 54px 13px 14px 138px;
     font-family: 'Poppins', sans-serif;
     border-radius: 5px;
     border: 3px solid #FE7800;

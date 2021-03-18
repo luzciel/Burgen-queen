@@ -11,12 +11,12 @@ const NumberTable = () => {
     console.log("Number Tables")
     return (
         <div className='tables'>
-            <Link to='/cocina'><img src={tableOne} alt='tableOne' className='number-table one'></img></Link>
-            <Link to='/cocina'><img src={tableTwo} alt='tableTwo' className='number-table two'></img></Link>
-            <Link to='/cocina'><img src={tableThree} alt='tableThree' className='number-table three'></img></Link>
-            <Link to='/cocina'><img src={tableFour} alt='tableFour' className='number-table four'></img></Link>
-            <Link to='/cocina'><img src={tableFive} alt='tableFive' className='number-table five'></img></Link>
-            <Link to='/cocina'><img src={tableSix} alt='tableSix' className='number-table six'></img></Link>
+            <Link to='/orders'><img src={tableOne} alt='tableOne' className='number-table one'></img></Link>
+            <Link to='/orders'><img src={tableTwo} alt='tableTwo' className='number-table two'></img></Link>
+            <Link to='/orders'><img src={tableThree} alt='tableThree' className='number-table three'></img></Link>
+            <Link to='/orders'><img src={tableFour} alt='tableFour' className='number-table four'></img></Link>
+            <Link to='/orders'><img src={tableFive} alt='tableFive' className='number-table five'></img></Link>
+            <Link to='/orders'><img src={tableSix} alt='tableSix' className='number-table six'></img></Link>
         </div>
     )
 }

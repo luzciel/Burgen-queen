@@ -1,19 +1,14 @@
 import React from 'react'
-import "./MenuButtons.css"
-import Button from '@material-ui/core/Button'
+import "./Orders.css"
 
-const menuButtons = () =>{
+const MenuButtons = () =>{
     return (
     
         <div>
-           <Button variant="text" color="secondary" variant="contained" className="breakfastButton" >
-             Desayunos
-           </Button>
-             
+         <button type="button">Desayuno</button>          
         </div>
     )
-    
-    ReactDOM.render(menuButtons, document.getElementById('root'));
+
 }
 
-export default menuButtons
+export default MenuButtons

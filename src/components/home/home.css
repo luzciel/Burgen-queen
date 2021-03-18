@@ -33,6 +33,7 @@ border: 1px solid rgba(0, 0, 0, 0.25);
 .navbar-expand-lg .navbar-collapse {
     display: flex!important;
     justify-content: flex-end;
+    font-family: 'Berkshire Swash', cursive;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -75,7 +76,7 @@ nav li>a:hover:before {
 
 nav i {
     color:black;
-    font-size: 1.5rem;
+    font-size: 1.5rem;   
     padding: .5rem 1.5rem;
 }
 
