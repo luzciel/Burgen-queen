@@ -1,9 +1,14 @@
 .home-body {
     background-image: url('../../img/burguer.jpeg') !important;
     height: 128vh;
-    margin-top: -181px;
+    margin-top: -162px;
     background-size: 100%;
     background-repeat: no-repeat;
+}
+
+a:link {
+    text-decoration:none;
+    color: black;
 }
 
 nav {
