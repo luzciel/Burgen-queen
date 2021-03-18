@@ -11,7 +11,7 @@ import './firebase';
 import firebase from "firebase/app";
 import Home from './components/home/Home.jsx';
 import Tables from './components/tables/Tables.jsx';
-import Ordenes from './components/ordens/Ordens.jsx';
+import Ordenes from './components/orders/OrdersInputs.jsx';
 import Cocina from './components/kitchen/Kitchen.jsx';
 import Header from './components/home/Header.jsx';
 import "./components/home/home.css"
@@ -40,7 +40,7 @@ function App() {
         <Route path="/mesas">
           <Tables />
         </Route>
-        <Route path="/ordenes">
+        <Route path="/orders">
           <Ordenes />
         </Route>
         <Route path="/cocina">
