@@ -55,3 +55,31 @@
 
 
 }
+
+.btnDesayuno{
+    width: 217.53px;
+    height: 89.44px;
+    margin: 62px 73px 10px 95px;
+    background-color: #D22704;
+    box-shadow: 0 10px 14px -7px #5b5b5f;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 29px;
+    color: #FFFFFF;
+    border-style: unset;
+}
+
+.btnAlmuerzo{
+    width: 217.53px;
+    height: 89.44px;
+    margin: 64px 57px 38px 41px;
+    background-color: #D22704;
+    box-shadow: 0 10px 14px -7px #5b5b5f;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 29px;
+    color: #FFFFFF;
+    border-style: unset;
+}
