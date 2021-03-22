@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Orders.css"
-import MenuButtons from './MenuButtons'
-const orders = () =>{
+
+const OrdersInpunts = () =>{
     return (
         <div>
             <input type="text" className="clientName" placeholder="Nombre Cliente"/>
@@ -9,11 +9,10 @@ const orders = () =>{
             <input type="number" className="tableNumber" placeholder="Mesa" />
             <hr className="hrOrders"></hr>
             
-            <MenuButtons/>
             
         </div>
 
     )
 }
 
-export default orders
+export default OrdersInpunts
