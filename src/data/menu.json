@@ -1,17 +1,18 @@
 {
     "desayuno" : [{
+        "id": 1,
         "producto": "Café americano",
         "precio": "500"
     },
-    {
+    {   "id": 2,
         "producto": "Café con leche",
         "precio": "700"
     },
-    {
+    {   "id": 3,
         "producto": "Sandwich de jamón y queso",
         "precio": "1000"
     },
-    {
+    {   "id": 4,
         "producto": "Jugo de frutas natural",
         "precio": "700",
         "opciones": [
@@ -20,8 +21,11 @@
             "Frambuesa"
         ]
     }
+    
+
     ],
     "almuerzo":[{
+      "id": 5,  
       "producto": "Hamburguesa simple",
       "precio": "1500",
       "opciones": [
@@ -29,16 +33,17 @@
           "Pollo",
           "Vegetariana"
       ],
+      "id": 6,
       "extra":[{
         "adicional": "Queso",
         "precio": "300"
       },
-      {
+      { "id": 7,
         "adicional": "Huevo",
         "precio": "300"
       }]
     },
-    {
+    {   "id": 8,
         "producto": "Hamburguesa Doble",
         "opciones": [
             "Res",
@@ -55,15 +60,15 @@
           "precio": "300"
         }]
       },
-      {
+      {   "id": 9,
           "producto": "Papas fritas",
           "precio": "700"
       },
-      {
+      { "id": 10,
         "producto": "Aros de cebolla",
         "precio": "500"
     },
-    {
+    {   "id": 11,
         "producto": "Agua 500ml",
         "precio": "500",
         "opciones": [
@@ -71,7 +76,7 @@
             "Sin gas"
         ]
     },
-    {
+    {   "id": 12,
         "producto": "Agua 750ml",
         "precio": "700",
         "opciones": [
@@ -79,7 +84,7 @@
             "Sin gas"
         ]
     },
-    {
+    {   "id": 13,
         "producto": "Bebida 500ml",
         "precio": "700",
         "opciones":[
@@ -88,7 +93,7 @@
             "Canada dry"
         ]
     },
-    {
+    {   "id": 14,
         "producto": "Bebida 750ml",
         "precio": "1000",
         "opciones":[

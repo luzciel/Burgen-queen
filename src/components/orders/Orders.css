@@ -68,7 +68,18 @@
     font-size: 29px;
     color: #FFFFFF;
     border-style: unset;
+
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #D22704;
 }
+
+.btnDesayuno:hover {
+    background-color:#D22704;
+    color: white;
+  }
 
 .btnAlmuerzo{
     width: 217.53px;
@@ -82,4 +93,15 @@
     font-size: 29px;
     color: #FFFFFF;
     border-style: unset;
+
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #D22704;
 }
+
+.btnAlmuerzo:hover {
+    background-color:#D22704;
+    color: white;
+  }
