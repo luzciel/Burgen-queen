@@ -3,6 +3,7 @@ import "../components/orders/Orders.css"
 import OrdersInpunts from '../components/orders/OrdersInputs'
 import MenuButtons from '../components/orders/MenuButtons'
 import BreakfastMenu from '../components/orders/BreakfastMenu'
+import LunchMenu from '../components/orders/LunchMenu'
 
 const OrdersViews = () =>{
     return (
@@ -12,6 +13,8 @@ const OrdersViews = () =>{
             <MenuButtons/>
 
             <BreakfastMenu/>
+            
+            <LunchMenu/>
             
         </div>
 
