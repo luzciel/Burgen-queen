@@ -5,7 +5,8 @@ const MenuButtons = () =>{
     return (
     
         <div>
-         <button type="button">Desayuno</button>          
+         <button type="button" className="btnDesayuno">Desayuno</button> 
+         <button type="button"className="btnAlmuerzo">Almuerzo</button>          
         </div>
     )
 

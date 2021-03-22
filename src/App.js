@@ -11,12 +11,12 @@ import './firebase';
 import firebase from "firebase/app";
 import Home from './components/home/Home.jsx';
 import Tables from './components/tables/Tables.jsx';
-import Ordenes from './components/orders/OrdersInputs.jsx';
+import OrdersInputs from './components/orders/OrdersInputs.jsx';
 import Cocina from './components/kitchen/Kitchen.jsx';
 import Header from './components/home/Header.jsx';
 import HomeViews from './views/HomeViews';
-
-import "./components/home/home.css"
+import OrdersViews from './views/OrdersViews';
+import "./components/home/home.css";
 
 function App() {
   const app = firebase.app();
@@ -42,8 +42,11 @@ function App() {
         <Route path="/mesas">
           <Tables />
         </Route>
+        {/* <Route path="/orders/:numTable"
+        component={OrdersViews} />
+        </Route> */}
         <Route path="/orders/:numTable"
-        component={Ordenes} />
+        component={OrdersViews} />
         <Route path="/cocina">
           <Cocina />
         </Route>

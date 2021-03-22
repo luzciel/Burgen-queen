@@ -8,7 +8,6 @@ import tableSix from '../../img/mesa 6 grupo.png'
 import {Link} from "react-router-dom";
 
 const NumberTable = () => {
-    console.log("Number Tables")
     return (
         <div className='tables col-sm'>
             <Link to='/orders/1'><img src={tableOne} alt='tableOne' className='number-table one'></img></Link>
