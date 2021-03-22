@@ -14,6 +14,8 @@ import Tables from './components/tables/Tables.jsx';
 import Ordenes from './components/orders/OrdersInputs.jsx';
 import Cocina from './components/kitchen/Kitchen.jsx';
 import Header from './components/home/Header.jsx';
+import HomeViews from './views/HomeViews';
+
 import "./components/home/home.css"
 
 function App() {
@@ -35,14 +37,13 @@ function App() {
       {/* <hr/> */}
       <Switch>
         <Route path="/" exact>
-          <Home />
+          <HomeViews />
         </Route>
         <Route path="/mesas">
           <Tables />
         </Route>
-        <Route path="/orders">
-          <Ordenes />
-        </Route>
+        <Route path="/orders/:numTable"
+        component={Ordenes} />
         <Route path="/cocina">
           <Cocina />
         </Route>
