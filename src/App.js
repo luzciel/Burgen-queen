@@ -15,8 +15,8 @@ import Ordenes from './components/orders/OrdersInputs.jsx';
 import Cocina from './components/kitchen/Kitchen.jsx';
 import Header from './components/home/Header.jsx';
 import HomeViews from './views/HomeViews';
-
-import "./components/home/home.css"
+import OrdersViews from './views/OrdersViews';
+import "./components/home/home.css";
 
 function App() {
   const app = firebase.app();
@@ -43,7 +43,7 @@ function App() {
           <Tables />
         </Route>
         <Route path="/orders">
-          <Ordenes />
+          <OrdersViews/>
         </Route>
         <Route path="/cocina">
           <Cocina />
