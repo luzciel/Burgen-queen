@@ -42,9 +42,6 @@ function App() {
         <Route path="/mesas">
           <Tables />
         </Route>
-        {/* <Route path="/orders/:numTable"
-        component={OrdersViews} />
-        </Route> */}
         <Route path="/orders/:numTable"
         component={OrdersViews} />
         <Route path="/cocina">

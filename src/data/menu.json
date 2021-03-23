@@ -13,29 +13,26 @@
         "precio": "1000"
     },
     {   "id": 4,
-        "producto": "Jugo de Fresa",
+        "producto": "Jugo de frutas natural",
         "precio": "700",
+        "opciones": [
+            "Fresa",
+            "Naranja",
+            "Frambuesa"
+        ]
     }
-    {   "id": 5,
-        "producto": "Jugo de Naranja",
-        "precio": "700",
-    }
-    {   "id": 6,
-        "producto": "Jugo de Frambuesa",
-        "precio": "700",
-    }
-
     ],
-    "almuerzo":[{
-      "id": 7,  
+    "almuerzo": [{
+      "id": 5,  
       "producto": "Hamburguesa simple",
       "precio": "1500",
       "opciones": [
           "Res",
           "Pollo",
           "Vegetariana"
-      ],
-      "id": 6,
+      ]
+    },
+    {  "id": 6,
       "extra":[{
         "adicional": "Queso",
         "precio": "300"

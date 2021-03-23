@@ -3,13 +3,11 @@ import "./Orders.css"
 
 const BreakfastMenu = () =>{
     
-            console.log ('hola desayuno')
         const [menu, setMenu] = React.useState([])
 
             React.useEffect(() => {
                 console.log('useEffect')
                 getData()
-                console.log(menu)
             }, [])
 
             const getData = async () => {
@@ -17,8 +15,6 @@ const BreakfastMenu = () =>{
                 const desayuno = await data.json()
                 
                 setMenu(desayuno.desayuno)
-                console.log(1111, menu)
-                console.log(2222, desayuno)
 
 
             }

@@ -1,7 +1,6 @@
 .container-views-tables{
     width: 100vw;
     height: 100vw;
-    /* background: rebeccapurple; */
     display: flex;
     flex-direction: column;
 }
@@ -10,7 +9,6 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* background: beige; */
     height: 9vh;
     margin-top: 11%;
 }
