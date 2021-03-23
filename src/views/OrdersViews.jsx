@@ -7,6 +7,7 @@ import OrdersInputs from '../components/orders/OrdersInputs'
 //import orders from '../components/orders/OrdersInputs'
 import LunchMenu from '../components/orders/LunchMenu'
 import OrderDetail from '../components/orders/OrderDetail'
+import LunchView from '../components/orders/LunchView'
 
 
 
@@ -14,18 +15,18 @@ import OrderDetail from '../components/orders/OrderDetail'
 // const [cart, setCart] =  React.useState([]) 
 const OrdersViews = () => {
 
+  const [btnDesayuno, setBtnDesayuno] = React.useState('Desayuno'); // estado del boton desayuno 
 
-  
-  const [btnDesayuno, setBtnDesayuno] = React.useState('Desayuno');
+  const [showBreakfast, setshowBreakfast] = React.useState(false); // estado del menu desayuno inicializado en false
+  const [showLunch, setShowLunch] = React.useState(false); // estado del menu Almuerzo inicializado en false
 
-  const [showBreakfast, setshowBreakfast] = React.useState(false);
-  const [showLunch, setShowLunch] = React.useState(false);
-
-  const toggleBreakfast = () => {
+  // Funcion que cambia el estado showBreakfast (menu desayuno)
+  const toggleBreakfast = () => { 
     setshowBreakfast(true)
     setShowLunch(false)
   }
 
+  // Funcion que cambia el estado showBreakfast (menu desayuno)
   const toggleLunch = () => {
     setshowBreakfast(false)
     setShowLunch(true)
@@ -41,17 +42,9 @@ const OrdersViews = () => {
          lunchClick={()=>{toggleLunch()}}
          /> 
 
-        {showBreakfast ? <BreakfastMenu/> : <LunchMenu/> } {/*estoy llamando la variable que declare en el linea 38 que es igual al valor del componente */}
+        {showBreakfast ? <BreakfastMenu/> : <LunchMenu/> } {/* si showBreakfast es true se muestre el menu del desayuno y sino se muestre el menu del almuerzo  */}
 
-        {/* {lunch}  estoy llamando la variable que declare en el linea 45 que es igual al valor del componente */}
-
-
-        {/* <div>
-        <OrderDetail
-          cart={cart}
-          setCart={setCart} />
-        </div>
-         */}
+    
     </div>
 
 )

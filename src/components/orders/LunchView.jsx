@@ -38,7 +38,6 @@ const LunchView = ({item, cart, setCart, menu}) => {
               }
                 
             </ul>
-  
         </div>
     )
 }
