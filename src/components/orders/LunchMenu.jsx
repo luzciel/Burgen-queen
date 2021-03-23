@@ -23,7 +23,7 @@ const LunchMenu = () =>{
     return (
    
         <div>
-          {
+          {     
                  menu.map( item =>(
                      <li key={item.id}>{item.producto} - {item.precio}</li>
                  ))

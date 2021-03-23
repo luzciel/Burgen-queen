@@ -66,13 +66,10 @@
     font-weight: bold;
     font-size: 29px;
     border-style: unset;
-
     background-color:#D22704;
     color: white;
-
-    transition-duration: 0.4s;
+    transition-duration: 0.7s;
     cursor: pointer;
-   
     border: 2px solid #D22704;
 }
 
@@ -85,23 +82,20 @@
     width: 217.53px;
     height: 89.44px;
     margin: 64px 57px 38px 41px;
-    background-color: #D22704;
     box-shadow: 0 10px 14px -7px #5b5b5f;
     border-radius: 20px;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     font-size: 29px;
-    color: #FFFFFF;
     border-style: unset;
-
-    transition-duration: 0.4s;
+    transition-duration: 0.7s;
     cursor: pointer;
-    background-color: white; 
-    color: black; 
+    background-color:#D22704;
+    color: white;
     border: 2px solid #D22704;
 }
 
 .btnLunch:hover {
-    background-color:#D22704;
-    color: white;
+    background-color: white; 
+    color: black; 
   }

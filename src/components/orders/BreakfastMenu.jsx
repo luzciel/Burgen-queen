@@ -15,10 +15,7 @@ const BreakfastMenu = () =>{
                 const desayuno = await data.json()
                 
                 setMenu(desayuno.desayuno)
-
-
             }
-   
 
     return (
    
@@ -27,7 +24,9 @@ const BreakfastMenu = () =>{
                  menu.map( item =>(
                      <li key={item.id}>{item.producto} - {item.precio}</li>
                  ))
-             }   
+             }  
+             
+              
         </div>
     )
 
