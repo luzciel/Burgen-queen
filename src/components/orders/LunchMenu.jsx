@@ -48,8 +48,8 @@ const LunchMenu = () =>{
             <OrderDetail
             cart={cart}
             setCart={setCart} />
-
             </div>
+            
         </div>
     )
 

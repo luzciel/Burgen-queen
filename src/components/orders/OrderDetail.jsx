@@ -4,7 +4,6 @@ import LunchView from './LunchView';
 
 const OrderDetail = ({cart, setCart}) => {
 
-    // const [cart, setCart] = useState ([])
 console.log('aQuiiiii')
 
     return (

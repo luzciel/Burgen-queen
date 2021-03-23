@@ -2,24 +2,21 @@ import React from 'react'
 import "./Orders.css"
 import BreakfastMenu from './BreakfastMenu'
 
-const MenuButtons = () =>{
-
-    < BreakfastMenu/> 
+const MenuButtons = (props) =>{
 
     const BreakfastData = () =>{
-
-        console.log('soy el boton data desayuno')
+        console.log('soy el boton data DESAYUNO')
     }
     
     const lunchData = () =>{
-        console.log('soy el boton lunch data')
+        console.log('soy el boton  data ALMUERZO')
     }
 
     return (
     
         <div>
-         <button type="button" className="btnBreakfast" onClick={()=>{BreakfastData()}} >Desayuno</button> 
-         <button type="button"className="btnLunch" onClick={()=>{lunchData()}} >Almuerzo</button>          
+         <button type="button" className="btnBreakfast" onClick={()=>{props.breakfastClick()}} >{props.btnDesayuno} </button> 
+         <button type="button"className="btnLunch" onClick={()=>{props.lunchClick()}} >Almuerzo</button>          
         </div>
     )
 

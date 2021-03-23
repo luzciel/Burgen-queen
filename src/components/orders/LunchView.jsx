@@ -8,7 +8,6 @@ const LunchView = ({item, cart, setCart, menu}) => {
 
         //Funcion que agrega el producto a la Orden     
         const addProduct = id => {
-            console.log(id, 77777)
             const item = menu.filter((item) => item.id === id);
             setCart([...cart, ...item])
         }
