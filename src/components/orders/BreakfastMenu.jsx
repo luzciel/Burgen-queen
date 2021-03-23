@@ -4,17 +4,22 @@ import "./Orders.css"
 const BreakfastMenu = () =>{
     
             console.log ('hola desayuno')
-        const [menu, breakfastMenu] = React.useState([])
+        const [menu, setMenu] = React.useState([])
 
             React.useEffect(() => {
                 console.log('useEffect')
                 getData()
+                console.log(menu)
             }, [])
 
             const getData = async () => {
                 const data = await fetch('https://luzciel.github.io/Burgen-queen/src/data/menu.json')
-                const menu = await data.json()
-                console.log(menu)
+                const desayuno = await data.json()
+                
+                setMenu(desayuno.desayuno)
+                console.log(1111, menu)
+                console.log(2222, desayuno)
+
 
             }
    
@@ -22,7 +27,11 @@ const BreakfastMenu = () =>{
     return (
    
         <div>
-         <h1>dessayuno</h1>  
+          {
+                 menu.map( item =>(
+                     <li key={item.id}>{item.producto} - {item.precio}</li>
+                 ))
+             }   
         </div>
     )
 
