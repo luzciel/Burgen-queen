@@ -39,7 +39,7 @@
         "precio": "300"
       }]
     },
-    {   "id": 8,
+    {   "id": 6,
         "producto": "Hamburguesa Doble",
         "opciones": [
             "Res",
@@ -56,15 +56,15 @@
           "precio": "300"
         }]
       },
-      {   "id": 9,
+      {   "id": 7,
           "producto": "Papas fritas",
           "precio": "700"
       },
-      { "id": 10,
+      { "id": 8,
         "producto": "Aros de cebolla",
         "precio": "500"
     },
-    {   "id": 11,
+    {   "id": 9,
         "producto": "Agua 500ml",
         "precio": "500",
         "opciones": [
@@ -72,7 +72,7 @@
             "Sin gas"
         ]
     },
-    {   "id": 12,
+    {   "id": 10,
         "producto": "Agua 750ml",
         "precio": "700",
         "opciones": [
@@ -80,7 +80,7 @@
             "Sin gas"
         ]
     },
-    {   "id": 13,
+    {   "id": 11,
         "producto": "Bebida 500ml",
         "precio": "700",
         "opciones":[
@@ -89,7 +89,7 @@
             "Canada dry"
         ]
     },
-    {   "id": 14,
+    {   "id": 12,
         "producto": "Bebida 750ml",
         "precio": "1000",
         "opciones":[
@@ -97,9 +97,7 @@
             "Fanta",
             "Canada dry"
         ]
-    }
-
-    
+    }   
 ]
 
 }
