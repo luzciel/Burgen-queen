@@ -1,4 +1,5 @@
 import React from 'react'
+import OrderDetail from './OrderDetail'
 import "./Orders.css"
 
 const BreakfastMenu = () =>{
@@ -17,14 +18,35 @@ const BreakfastMenu = () =>{
                 setMenu(desayuno.desayuno)
             }
 
+            const [cart, setCart] =  React.useState([]) 
+
+        //Funcion que agrega el producto a la Orden     
+        const addProduct = id => {
+            const item = menu.filter((item) => item.id === id);
+            setCart([...cart, ...item])
+        }
+
     return (
    
         <div>
-          {
+            {
                  menu.map( item =>(
-                     <li key={item.id}>{item.producto} - {item.precio}</li>
+                     <div key={item.id}>
+                         <ul>
+                             <li>{item.producto}</li>
+                             <li>{item.precio}</li>
+                             <button type='button' onClick={() => addProduct(item.id)}>Agregar</button>
+                         </ul>
+                         </div>   
                  ))
-             }  
+            } 
+
+            <div>
+            {<OrderDetail
+            cart={cart}
+            setCart={setCart} />}
+            </div>
+
              
               
         </div>

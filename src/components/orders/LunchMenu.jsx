@@ -45,11 +45,11 @@ const LunchMenu = () =>{
             </div>
 
             <div>
-            <OrderDetail
+            {<OrderDetail
             cart={cart}
-            setCart={setCart} />
+            setCart={setCart} />}
             </div>
-            
+
         </div>
     )
 
