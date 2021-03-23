@@ -30,15 +30,12 @@
           "Res",
           "Pollo",
           "Vegetariana"
-      ]
-    },
-    {  "id": 6,
+      ],
       "extra":[{
         "adicional": "Queso",
         "precio": "300"
       },
-      { "id": 7,
-        "adicional": "Huevo",
+      {"adicional": "Huevo",
         "precio": "300"
       }]
     },
