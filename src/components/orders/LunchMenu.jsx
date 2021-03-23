@@ -30,7 +30,8 @@ const LunchMenu = () =>{
 
     return (
    
-        <div>
+        <div className='container menus'>
+            <div>
             <h2>Menu</h2>
           { menu.map(item =>(
               <LunchView 
@@ -41,11 +42,14 @@ const LunchMenu = () =>{
               menu={menu}
               />
               ))}   
+            </div>
 
-
+            <div>
             <OrderDetail
             cart={cart}
             setCart={setCart} />
+
+            </div>
         </div>
     )
 

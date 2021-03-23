@@ -105,3 +105,10 @@
     background-color:#D22704;
     color: white;
   }
+
+
+
+  .menus{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+  }

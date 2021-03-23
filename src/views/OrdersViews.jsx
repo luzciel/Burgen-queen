@@ -10,16 +10,19 @@ import LunchMenu from '../components/orders/LunchMenu'
 const OrdersViews = (props) =>{
     console.log(props)
     return (
-        <div>
+        <div className='container OrdersViews'>
             <OrdersInputs/>
             <input type="text" className="tableNumber" placeholder="Mesa" value={`Mesa ${props.match.params.numTable}`} />
             <hr className="hrOrders"></hr>
-
+            
+            <div className='container menuOrder'>
             <MenuButtons/>
 
             <BreakfastMenu/>
             
             <LunchMenu/>
+
+            </div>
             
         </div>
 
