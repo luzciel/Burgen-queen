@@ -60,29 +60,30 @@
     width: 217.53px;
     height: 89.44px;
     margin: 62px 73px 10px 95px;
-    box-shadow: 0 10px 14px -7px #5b5b5f;
+    box-shadow: 0 29px 39px -5px rgb(91 91 95 / 47%);
     border-radius: 20px;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     font-size: 29px;
     border-style: unset;
-    background-color:#D22704;
-    color: white;
     transition-duration: 0.7s;
     cursor: pointer;
     border: 2px solid #D22704;
+    background-color: white; 
+    color: black;
 }
 
 .btnBreakfast:hover {
-    background-color: white; 
-    color: black; 
+    background-color:#D22704;
+    color: white;
+     
   }
 
 .btnLunch{
     width: 217.53px;
     height: 89.44px;
     margin: 64px 57px 38px 41px;
-    box-shadow: 0 10px 14px -7px #5b5b5f;
+    box-shadow: 0 29px 39px -5px rgb(91 91 95 / 47%);
     border-radius: 20px;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
@@ -90,12 +91,12 @@
     border-style: unset;
     transition-duration: 0.7s;
     cursor: pointer;
-    background-color:#D22704;
-    color: white;
     border: 2px solid #D22704;
+    background-color: white; 
+    color: black; 
 }
 
 .btnLunch:hover {
-    background-color: white; 
-    color: black; 
+    background-color:#D22704;
+    color: white;
   }
