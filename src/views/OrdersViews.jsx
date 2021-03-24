@@ -11,9 +11,7 @@ import LunchView from '../components/orders/LunchView'
 
 
 
-
-// const [cart, setCart] =  React.useState([]) 
-const OrdersViews = () => {
+const OrdersViews = (props) => {
 
   const [btnDesayuno, setBtnDesayuno] = React.useState('Desayuno'); // estado del boton desayuno 
 
@@ -35,6 +33,8 @@ const OrdersViews = () => {
   return (
     <div>
         <OrdersInputs/>
+        <input type="text" className="tableNumber" placeholder="Mesa" value={`Mesa ${props.match.params.numTable}`} />
+        <hr className="hrOrders"></hr>
 
         <MenuButtons  //propiedades del componente hijo (MenuButtons)
          btnDesayuno={btnDesayuno}     
@@ -50,6 +50,8 @@ const OrdersViews = () => {
 )
 
 }
+
+export default OrdersViews
 
 // // class OrdersViews extends React.Component{ //extiende la funcionalidad del componenete - orderViews es el padre
 // //     constructor(props) {
@@ -121,5 +123,3 @@ const OrdersViews = () => {
 
 //     }
 // }
-
-export default OrdersViews
