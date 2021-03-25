@@ -11,8 +11,8 @@ const SendKitchen = () => {
     return (
 
     <div>
-        <button type="button" class="btn btn-primary btn-sm">Enviar a cocina</button>
-        <button type="button" class="btn btn-primary btn-sm">Cancelar Pedido</button>
+        <button type="button" class="btn btn-lg btn-send">Enviar a cocina</button>
+        <button type="button" class="btn btn-lg btn-cancel">Cancelar Pedido</button>
     </div>
     )
 
