@@ -8,7 +8,7 @@ import circlePlus from '../../img/circlePlus.svg';
 
 
 
-const LunchView = ({ item, cart, setCart, menu, sendSubTotal }) => {
+const LunchView = ({ item, cart, setCart, menu, sendSubTotal, key }) => {
 
   const { producto, precio, id } = item;
   const [quantity, setQuantity] = useState(1);
@@ -49,6 +49,12 @@ const LunchView = ({ item, cart, setCart, menu, sendSubTotal }) => {
   //   setSubTotal(productSubTotal)
   // }
 
+    //Sumar el total de los items
+    const productPrices = cart.map((item) => Math.floor(item.precio) * quantity); // Recorre el carrito y crea un nuevo array con los precios (NUMBER)
+    const grandTotal = productPrices.reduce((a, b) => a + b, 0); // reduce, toma todos los elementos en un array, y los reduce en un solo valor.
+    console.log(4, 'tota', grandTotal)
+
+
   if (sendSubTotal) {
     sendSubTotal(productSubTotal);
   }
@@ -75,7 +81,7 @@ const LunchView = ({ item, cart, setCart, menu, sendSubTotal }) => {
       <tr>
         <th scope="row"><span onClick={() => deleteProduct(id)}>{iconDelete}</span></th>
         <td className='name-product' colspan="2">{producto}</td>
-        <td>
+        <td className='div-quantity'>
             <span><span onClick={incrementQuatity}>{iconCirclePlus}</span>
               {quantity > 0 ? (
                 <span className="quantity-number">{quantity}</span>

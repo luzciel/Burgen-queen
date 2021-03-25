@@ -18,7 +18,7 @@ const OrderDetail = ({ cart, setCart }) => {
   //Funcion que detalla el contenido de la orden si esta tiene un lenght diferente a 0
   const listLunchView = () => {
     if (cart.length === 0) {
-      return <p>No hay productos en el carrito</p>;
+      return <p className='empty-cart'>Agrega productos a la orden</p>;
     } else {
       return cart.map(((item, index) => <LunchView key={index + "menu"} item={item} cart={cart} setCart={setCart} sendSubTotal={getSubTotal} />))
     }
@@ -39,11 +39,11 @@ const OrderDetail = ({ cart, setCart }) => {
       </table>
       <div className="div-total">
       <h1 className="total">Total</h1>
-      <h1 className="total">{grandTotal}</h1>
+      <h1 className="total">${grandTotal}</h1>
       </div>
       <div className="div-btn">
-        <button type="button" class="btn btn-lg btn-send">Enviar a cocina</button>
-        <button type="button" class="btn btn-lg btn-cancel">Cancelar Pedido</button>
+        <a href='/cocina'><button type="button" class="btn btn-lg btn-send">Enviar a cocina</button></a>
+        <a href='/'><button type="button" class="btn btn-lg btn-cancel">Cancelar Pedido</button></a>
       </div>
     </div>
   )
