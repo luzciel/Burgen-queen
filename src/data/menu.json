@@ -22,21 +22,19 @@
             "id": 4,
             "producto": "Jugo de frutas natural",
             "precio": "700",
+            "img": "https://i.imgur.com/rQc0izk.jpeg",
             "opciones": [
                 {
                     "id": 41,
                     "opcion": "Fresa",
-                    "img": "https://i.imgur.com/rQc0izk.jpeg"
                 },
                 {
                     "id": 42,
                     "opcion": "Naranja",
-                    "img": "https://i.imgur.com/6cBiazZ.jpeg"
                 },
                 {
                     "id": 43,
                     "opcion": "Frambuesa",
-                    "img": "https://i.imgur.com/6ZZtdnd.jpeg"
                 }
             ]
         }
@@ -51,17 +49,14 @@
                 {
                     "id": 51,
                     "opcion": "Res",
-                    "img": "https://i.imgur.com/esTTXWi.jpg"
                 },
                 {
                     "id": 52,
                     "opcion": "Pollo",
-                    "img": "https://i.imgur.com/K4qcqDK.jpg"
                 },
                 {
                     "id": 53,
                     "opcion": "Vegetariana",
-                    "img": "https://i.imgur.com/yO9Xxvt.jpeg"
                 }
             ],
             "extra": [
@@ -80,22 +75,19 @@
         {
             "id": 6,
             "producto": "Hamburguesa Doble",
-            "img": "https://i.imgur.com/tsdu2XL.jpeg",
+            "img": "https://i.imgur.com/wqQKZc7.jpeg",
             "opciones": [
                 {
                     "id": 61,
                     "opcion": "Res",
-                    "img": "https://i.imgur.com/tsdu2XL.jpeg"
                 },
                 {
                     "id": 62,
                     "opcion": "Pollo",
-                    "img": "https://i.imgur.com/wqQKZc7.jpeg"
                 },
                 {
                     "id": 63,
                     "opcion": "Vegetariana",
-                    "img": "https://i.imgur.com/nNWY9JM.jpeg"
                 }  
             ],
             "precio": "3000",
@@ -128,16 +120,15 @@
             "id": 9,
             "producto": "Agua 500ml",
             "precio": "500",
+            "img": "https://i.imgur.com/erSRUNK.jpg",
             "opciones": [
                 {
                     "id": 91,
-                    "opcion": "Con gas",
-                    "img": "https://i.imgur.com/EHWC7aJ.jpeg"
+                    "opcion": "Con gas"
                 },
                 {
                     "id": 92,
-                    "opcion": "Sin gas",
-                    "img": "https://i.imgur.com/erSRUNK.jpg"
+                    "opcion": "Sin gas"
                 }
             ]
         },
@@ -145,16 +136,15 @@
             "id": 10,
             "producto": "Agua 750ml",
             "precio": "700",
+            "img": "https://i.imgur.com/EHWC7aJ.jpeg",
             "opciones": [
                 {
                     "id": 101,
-                    "opcion": "Con gas",
-                    "img": "https://i.imgur.com/EHWC7aJ.jpeg"
+                    "opcion": "Con gas"
                 },
                 {
                     "id": 102,
-                    "opcion": "Sin gas",
-                    "img": "https://i.imgur.com/erSRUNK.jpg"
+                    "opcion": "Sin gas"
                 }
             ]
         },
@@ -166,18 +156,15 @@
             "opciones": [
                 {
                     "id": 111,
-                    "opcion": "Coca-cola",
-                    "img": "https://i.imgur.com/uSCgHjx.jpg"
+                    "opcion": "Coca-cola"
                 },
                 {
                     "id": 112,
-                    "opcion": "Fanta",
-                    "img": "https://i.imgur.com/B6HRpvw.jpeg"
+                    "opcion": "Fanta"
                 },
                 {
                     "id": 113,
-                    "opcion": "Canada dry",
-                    "img": "https://i.imgur.com/qnQwWSX.jpg"
+                    "opcion": "Canada dry"
                 }
             ]
         },
@@ -185,22 +172,19 @@
             "id": 12,
             "producto": "Bebida 750ml",
             "precio": "1000",
-            "img": "https://i.imgur.com/B6HRpvw.jpeg",
+            "img": "https://i.imgur.com/qnQwWSX.jpg",
             "opciones": [
                 {
                     "id": 121,
-                    "opcion": "Coca-cola",
-                    "img": "https://i.imgur.com/uSCgHjx.jpg"
+                    "opcion": "Coca-cola"
                 },
                 {
                     "id": 122,
-                    "opcion": "Fanta",
-                    "img": "https://i.imgur.com/B6HRpvw.jpeg"
+                    "opcion": "Fanta"
                 },
                 {
                     "id": 123,
-                    "opcion": "Canada dry",
-                    "img": "https://i.imgur.com/qnQwWSX.jpg"
+                    "opcion": "Canada dry"
                 }
             ]
         }
