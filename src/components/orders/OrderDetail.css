@@ -1,0 +1,30 @@
+.orders-detail{
+    background: #FFFFFF;
+    border: 1px solid #CBCBCB;
+    box-sizing: border-box;
+    border-radius: 30px;
+    margin-left: 3%;
+}
+
+.orders-detail-title{
+    font-family: 'Poppins', sans-serif;
+    color: #454040;
+    font-weight: 700;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.name-product{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    color: #817B7B;
+    font-size: 140%;
+}
+
+.quantity-number{
+    margin: 0 8%;
+}
+
+.quantity-icon{
+    color: #817B7B;
+}
