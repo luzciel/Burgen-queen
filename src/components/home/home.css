@@ -26,7 +26,7 @@ border: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 .navbar-expand-lg {
-  background-color:#fff; 
+  background-color:rgba(203, 203, 203, 0.42); 
   height: 57px;
 }
 
