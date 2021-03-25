@@ -34,12 +34,17 @@ const OrderDetail = ({ cart, setCart }) => {
       <h4 className='orders-detail-title'>Detalles</h4>
       <table class="table">
         <thead>
-          <tr></tr>
         </thead>
       {listLunchView()}
       </table>
-      <h1>Total {grandTotal} </h1>
-      <SendKitchen />
+      <div className="div-total">
+      <h1 className="total">Total</h1>
+      <h1 className="total">{grandTotal}</h1>
+      </div>
+      <div className="div-btn">
+        <button type="button" class="btn btn-lg btn-send">Enviar a cocina</button>
+        <button type="button" class="btn btn-lg btn-cancel">Cancelar Pedido</button>
+      </div>
     </div>
   )
 }

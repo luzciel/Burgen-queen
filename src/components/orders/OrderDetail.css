@@ -28,3 +28,30 @@
 .quantity-icon{
     color: #817B7B;
 }
+
+.div-total{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+.div-btn{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2%;
+    color: #454040;
+}
+.btn-cancel, .btn-send {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-radius: 22px;
+}
+
+.btn-cancel{
+    background: #D22704;
+}
+.btn-send {
+    background: rgba(42, 200, 86, 0.88);
+}

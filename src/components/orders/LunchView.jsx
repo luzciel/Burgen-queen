@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import LunchMenu from './LunchMenu';
 import { Icon, InlineIcon } from '@iconify/react';
 import delete24Regular from '@iconify/icons-fluent/delete-24-regular';
-import circlePlus from '@iconify/icons-akar-icons/circle-plus';
-import less from '../../img/less.svg'
+// import circlePlus from '@iconify/icons-akar-icons/circle-plus';
+import less from '../../img/less.svg';
+import circlePlus from '../../img/circlePlus.svg';
 
 
 
@@ -13,8 +14,9 @@ const LunchView = ({ item, cart, setCart, menu, sendSubTotal }) => {
   const [quantity, setQuantity] = useState(1);
   const [subTotal, setSubTotal] = useState([]);
   const iconDelete = <Icon icon={delete24Regular} style={{ color: '#ff0b0b', fontSize: '25px' }} />;
-  const iconCirclePlus = <Icon icon={circlePlus} style={{ fontSize: '31.722944259643555px' }} className='quantity-icon' />;
-  const iconLess = <img src={less} alt='tableOne' className='quantity-icon'></img>;
+  const iconCirclePlus =  <img src={circlePlus} alt='iconCirclePlus' className='quantity-icon'></img>;
+  // const iconCirclePlus = <Icon icon={circlePlus} style={{ fontSize: '31.722944259643555px' }} className='quantity-icon' />;
+  const iconLess = <img src={less} alt='iconLess' className='quantity-icon'></img>;
 
 
   // console.log(11, 'item', item)
@@ -73,7 +75,6 @@ const LunchView = ({ item, cart, setCart, menu, sendSubTotal }) => {
       <tr>
         <th scope="row"><span onClick={() => deleteProduct(id)}>{iconDelete}</span></th>
         <td className='name-product' colspan="2">{producto}</td>
-        <td>   </td>
         <td>
             <span><span onClick={incrementQuatity}>{iconCirclePlus}</span>
               {quantity > 0 ? (
