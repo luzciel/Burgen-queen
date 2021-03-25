@@ -31,8 +31,7 @@ const LunchMenu = () =>{
     return (
    
         <div className='container menus'>
-            <div className='lunch-menu card'>
-            <h2>Menu</h2>
+            <div className='lunch-menu '>
           { menu.map(item =>(
               <LunchView 
               key={item.id}
