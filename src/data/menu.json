@@ -4,19 +4,19 @@
             "id": 1,
             "producto": "Café americano",
             "precio": "500",
-            "img": "https://i.imgur.com/qn6UBe3.jpg"
+            "img": "https://i.imgur.com/Bnz42QJ.jpeg"
         },
         {
             "id": 2,
             "producto": "Café con leche",
             "precio": "700",
-            "img": "https://i.imgur.com/jB4yo1g.jpg"
+            "img": "https://i.imgur.com/J8Se73h.jpeg"
         },
         {
             "id": 3,
             "producto": "Sandwich de jamón y queso",
             "precio": "1000",
-            "img": "https://i.imgur.com/ZeJbwmB.jpg"
+            "img": "https://i.imgur.com/QEAzA1f.jpg"
         },
         {
             "id": 4,
@@ -108,13 +108,13 @@
             "id": 7,
             "producto": "Papas fritas",
             "precio": "700",
-            "img": "https://i.imgur.com/cURPUBW.jpeg"
+            "img": "https://i.imgur.com/7nSCH5l.jpg"
         },
         {
             "id": 8,
             "producto": "Aros de cebolla",
             "precio": "500",
-            "img": "https://i.imgur.com/pHHNrQS.jpeg"
+            "img": "https://i.imgur.com/PklOKps.jpg"
         },
         {
             "id": 9,
