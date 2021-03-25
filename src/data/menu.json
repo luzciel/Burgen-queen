@@ -4,20 +4,20 @@
             "id": 1,
             "producto": "Café americano",
             "precio": "500",
-            "img": "https://imgur.com/qn6UBe3"
+            "img": "https://i.imgur.com/qn6UBe3.jpg"
         },
         {
             "id": 2,
             "producto": "Café con leche",
             "precio": "700",
-            "img": "https://imgur.com/jB4yo1g"
+            "img": "https://i.imgur.com/jB4yo1g.jpg"
         },
         {
             "id": 3,
             "producto": "Sandwich de jamón y queso",
             "precio": "1000",
-            "img": "https://imgur.com/ZeJbwmB"
-        },
+            "img": "https://i.imgur.com/ZeJbwmB.jpg"
+           
         {
             "id": 4,
             "producto": "Jugo de frutas natural",
@@ -26,17 +26,17 @@
                 {
                     "id": 41,
                     "opcion": "Fresa",
-                    "img": "https://imgur.com/rQc0izk"
+                    "img": "https://i.imgur.com/rQc0izk.jpeg"
                 },
                 {
                     "id": 42,
                     "opcion": "Naranja",
-                    "img": "https://imgur.com/6cBiazZ"
+                    "img": "https://i.imgur.com/6cBiazZ.jpeg"
                 },
                 {
                     "id": 43,
                     "opcion": "Frambuesa",
-                    "img": "https://imgur.com/6ZZtdnd"
+                    "img": "https://i.imgur.com/6ZZtdnd.jpeg"
                 }
             ]
         }
@@ -46,22 +46,22 @@
             "id": 5,
             "producto": "Hamburguesa simple",
             "precio": "1500",
-            "img": "https://imgur.com/esTTXWi",
+            "img": "https://i.imgur.com/esTTXWi.jpg",
             "opciones": [
                 {
                     "id": 51,
                     "opcion": "Res",
-                    "img": "https://imgur.com/esTTXWi"
+                    "img": "https://i.imgur.com/esTTXWi.jpg"
                 },
                 {
                     "id": 52,
                     "opcion": "Pollo",
-                    "img": "https://imgur.com/K4qcqDK"
+                    "img": "https://i.imgur.com/K4qcqDK.jpg"
                 },
                 {
                     "id": 53,
                     "opcion": "Vegetariana",
-                    "img": "https://imgur.com/yO9Xxvt"
+                    "img": "https://i.imgur.com/yO9Xxvt.jpeg"
                 }
             ],
             "extra": [
@@ -80,22 +80,22 @@
         {
             "id": 6,
             "producto": "Hamburguesa Doble",
-            "img": "https://imgur.com/tsdu2XL",
+            "img": "https://i.imgur.com/tsdu2XL.jpeg",
             "opciones": [
                 {
                     "id": 61,
                     "opcion": "Res",
-                    "img": "https://imgur.com/tsdu2XL"
+                    "img": "https://i.imgur.com/tsdu2XL.jpeg"
                 },
                 {
                     "id": 62,
                     "opcion": "Pollo",
-                    "img": "https://imgur.com/wqQKZc7"
+                    "img": "https://i.imgur.com/wqQKZc7.jpeg"
                 },
                 {
                     "id": 63,
                     "opcion": "Vegetariana",
-                    "img": "https://imgur.com/nNWY9JM"
+                    "img": "https://i.imgur.com/nNWY9JM.jpeg"
                 }  
             ],
             "precio": "3000",
@@ -116,13 +116,13 @@
             "id": 7,
             "producto": "Papas fritas",
             "precio": "700",
-            "img": "https://imgur.com/cURPUBW"
+            "img": "https://i.imgur.com/cURPUBW.jpeg"
         },
         {
             "id": 8,
             "producto": "Aros de cebolla",
             "precio": "500",
-            "img": "https://imgur.com/pHHNrQS"
+            "img": "https://i.imgur.com/pHHNrQS.jpeg"
         },
         {
             "id": 9,
@@ -132,12 +132,12 @@
                 {
                     "id": 91,
                     "opcion": "Con gas",
-                    "img": "https://imgur.com/EHWC7aJ"
+                    "img": "https://i.imgur.com/EHWC7aJ.jpeg"
                 },
                 {
                     "id": 92,
                     "opcion": "Sin gas",
-                    "img": "https://imgur.com/erSRUNK"
+                    "img": "https://i.imgur.com/erSRUNK.jpg"
                 }
             ]
         },
@@ -149,12 +149,12 @@
                 {
                     "id": 101,
                     "opcion": "Con gas",
-                    "img": "https://imgur.com/EHWC7aJ"
+                    "img": "https://i.imgur.com/EHWC7aJ.jpeg"
                 },
                 {
                     "id": 102,
                     "opcion": "Sin gas",
-                    "img": "https://imgur.com/erSRUNK"
+                    "img": "https://i.imgur.com/erSRUNK.jpg"
                 }
             ]
         },
@@ -162,22 +162,22 @@
             "id": 11,
             "producto": "Bebida 500ml",
             "precio": "700",
-            "img": "https://imgur.com/uSCgHjx",
+            "img": "https://i.imgur.com/uSCgHjx.jpg",
             "opciones": [
                 {
                     "id": 111,
                     "opcion": "Coca-cola",
-                    "img": "https://imgur.com/uSCgHjx"
+                    "img": "https://i.imgur.com/uSCgHjx.jpg"
                 },
                 {
                     "id": 112,
                     "opcion": "Fanta",
-                    "img": "https://imgur.com/B6HRpvw"
+                    "img": "https://i.imgur.com/B6HRpvw.jpeg"
                 },
                 {
                     "id": 113,
                     "opcion": "Canada dry",
-                    "img": "https://imgur.com/qnQwWSX"
+                    "img": "https://i.imgur.com/qnQwWSX.jpg"
                 }
             ]
         },
@@ -185,22 +185,22 @@
             "id": 12,
             "producto": "Bebida 750ml",
             "precio": "1000",
-            "img": "https://imgur.com/B6HRpvw",
+            "img": "https://i.imgur.com/B6HRpvw.jpeg",
             "opciones": [
                 {
                     "id": 121,
                     "opcion": "Coca-cola",
-                    "img": "https://imgur.com/uSCgHjx"
+                    "img": "https://i.imgur.com/uSCgHjx.jpg"
                 },
                 {
                     "id": 122,
                     "opcion": "Fanta",
-                    "img": "https://imgur.com/B6HRpvw"
+                    "img": "https://i.imgur.com/B6HRpvw.jpeg"
                 },
                 {
                     "id": 123,
                     "opcion": "Canada dry",
-                    "img": "https://imgur.com/qnQwWSX"
+                    "img": "https://i.imgur.com/qnQwWSX.jpg"
                 }
             ]
         }
