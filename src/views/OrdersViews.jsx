@@ -31,7 +31,7 @@ const OrdersViews = (props) => {
   }
   
   return (
-    <div>
+    <div className="inputsContainer">
         <OrdersInputs/>
         <input type="text" className="tableNumber" placeholder="Mesa" value={`Mesa ${props.match.params.numTable}`} />
         <hr className="hrOrders"></hr>

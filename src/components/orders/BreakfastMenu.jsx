@@ -28,15 +28,16 @@ const BreakfastMenu = () =>{
 
     return (
         <div className='container menus'>
-        <div className='breakfast-menu card '>
+        <div className='breakfast-menu '>
             {
                  menu.map( item =>(
-                     <div key={item.id}>
-                         <ul>
-                             <li>{item.producto}</li>
-                             <li>{item.precio}</li>
-                             <button type='button' onClick={() => addProduct(item.id)}>Agregar</button>
-                         </ul>
+                     <div key={item.id}  className='unicard card'>
+                             <h1 className='product-name' >{item.producto}</h1>
+                             {/* {item.img}  */}
+                             <button type='button' className='product-price'>${item.precio}</button>
+                             <button type='button' className='additional-button-egg'>Huevo: 500</button>
+                             <button type='button' className='additional-button-cheese'>Queso: 500</button>
+                             <button type='button' className="add-button" onClick={() => addProduct(item.id)}>+ Añadir</button>
                          </div>   
                  ))
             } 

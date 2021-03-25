@@ -10,7 +10,7 @@
 }*/
 
 .clientName{
-    margin: 82px 13px 14px 63px;
+    margin: 82px -97px 0px 43px;
     font-family: 'Poppins', sans-serif;
     border-radius: 5px;
     border: 3px solid #FE7800;
@@ -23,27 +23,27 @@
 }
 
 .waiterName{
-    margin: 85px 16px 12px 130px;
+    margin: 82px 0px 0px 108px;
     font-family: 'Poppins', sans-serif;
     border-radius: 5px;
     border: 3px solid #FE7800;
     background-color: #F6F1F1;
     padding: 15px;
     height: 38px;
-    width: 222px;
+    width: 206px;
     outline: none;
 
 }
 
 .tableNumber{
-    margin: 54px 13px 14px 138px;
+    margin: 0px 0px 0px 598px;
     font-family: 'Poppins', sans-serif;
     border-radius: 5px;
     border: 3px solid #FE7800;
     background-color: #F6F1F1;
     padding: 15px;
     height: 38px;
-    width: 127px;
+    width: 87px;
     outline: none;
 
 }
@@ -57,9 +57,9 @@
 }
 
 .btnBreakfast{
-    width: 217.53px;
-    height: 89.44px;
-    margin: 62px 73px 10px 95px;
+    width: 165.53px;
+    height: 68.44px;
+    margin: 49px 21px 10px 127px;
     box-shadow: 0 29px 39px -5px rgb(91 91 95 / 47%);
     border-radius: 20px;
     font-family: 'Poppins', sans-serif;
@@ -80,8 +80,8 @@
   }
 
 .btnLunch{
-    width: 217.53px;
-    height: 89.44px;
+    width: 165.53px;
+    height: 68.44px;
     margin: 64px 57px 38px 41px;
     box-shadow: 0 29px 39px -5px rgb(91 91 95 / 47%);
     border-radius: 20px;
@@ -103,7 +103,108 @@
 
 
 
-  .menus{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
+    .menus {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .container menus{
+
+    }
+
+    .breakfast-menu {
+        display: flex;
+        flex-wrap: wrap;
+
+
+    }
+
+  .unicard {
+    box-shadow: 0 10px 14px -7px #5b5b5f;
+    width: 262.99px;
+    height: 320.2px;
+    margin: 10px 7px 30px 10px;
+    border-radius: 20px;
+
+
+
   }
+
+  .add-button{
+    width: 132.82px;
+    height: 37.39px;
+    background-color: rgba(254, 120, 0, 1);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    width: 99.82px;
+    border-style: unset;
+    border-radius: 20px;
+    margin: -10px 0px 0px 77px;
+
+
+  }
+
+  .product-name{
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 27px;
+    margin: 15px 36px;
+
+  }
+
+  .additional-button-egg{
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    color: black; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    border-radius: 20px;
+    transition-duration: 0.7s;
+    cursor: pointer;
+    border: 2px solid rgba(254, 120, 0, 1) ;
+    margin: 15px 2px 4px 24px;
+
+
+  }
+   
+  .additional-button-egg:hover {
+    background-color:rgba(254, 120, 0, 0.46);
+    color: black;
+  }
+
+.additional-button-cheese{
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    color: black; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    border-radius: 20px;
+    transition-duration: 0.7s;
+    cursor: pointer;
+    border: 2px solid rgba(254, 120, 0, 1);
+    margin: -34px 8px 19px 141px;
+
+}
+
+.additional-button-cheese:hover {
+    background-color:rgba(254, 120, 0, 0.46);
+    color: black;
+  }
+
+  .product-price{
+    width: 100px;
+    height: 30px;
+    background-color:  white;
+    color: black; 
+    border-style: unset;
+    box-shadow: 0 10px 14px -7px #5b5b5f;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 20px;
+    margin: 79px 17px 15px 78px;
+
+
+  }
+
+  
+
