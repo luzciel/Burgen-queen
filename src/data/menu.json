@@ -26,15 +26,15 @@
             "opciones": [
                 {
                     "id": 41,
-                    "opcion": "Fresa",
+                    "opcion": "Fresa"
                 },
                 {
                     "id": 42,
-                    "opcion": "Naranja",
+                    "opcion": "Naranja"
                 },
                 {
                     "id": 43,
-                    "opcion": "Frambuesa",
+                    "opcion": "Frambuesa"
                 }
             ]
         }
@@ -48,15 +48,15 @@
             "opciones": [
                 {
                     "id": 51,
-                    "opcion": "Res",
+                    "opcion": "Res"
                 },
                 {
                     "id": 52,
-                    "opcion": "Pollo",
+                    "opcion": "Pollo"
                 },
                 {
                     "id": 53,
-                    "opcion": "Vegetariana",
+                    "opcion": "Vegetariana"
                 }
             ],
             "extra": [
@@ -79,15 +79,15 @@
             "opciones": [
                 {
                     "id": 61,
-                    "opcion": "Res",
+                    "opcion": "Res"
                 },
                 {
                     "id": 62,
-                    "opcion": "Pollo",
+                    "opcion": "Pollo"
                 },
                 {
                     "id": 63,
-                    "opcion": "Vegetariana",
+                    "opcion": "Vegetariana"
                 }  
             ],
             "precio": "3000",
