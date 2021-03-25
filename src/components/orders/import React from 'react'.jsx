@@ -29,7 +29,7 @@ const BreakfastMenu = () =>{
         <div>
             {
             menu.forEach(item =>(
-                    <li key={item.id}>{item.producto} - {item.precio} - {item.img}</li>
+                    <li key={item.id}>{item.producto} - {item.precio}</li>
                 ))
             }  
         </div>
