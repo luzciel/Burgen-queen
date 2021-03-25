@@ -14,11 +14,23 @@
     margin-top: 2%;
 }
 
+.empty-cart{
+    margin-left: 5%;
+}
+
 .name-product{
     font-family: 'Roboto Slab', serif;
     font-weight: 400;
     color: #817B7B;
     font-size: 140%;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    width: 67%;
+}
+
+.div-quantity{
+    padding-right: 0 !important;
+    padding-left: 0 !important; 
 }
 
 .quantity-number{
@@ -27,4 +39,37 @@
 
 .quantity-icon{
     color: #817B7B;
+}
+
+.div-total{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5%;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 182%;
+}
+.div-btn{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2%;
+    color: #454040;
+}
+.btn-cancel, .btn-send {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-radius: 22px;
+}
+
+.btn-cancel{
+    background: #D22704;
+}
+.btn-send {
+    background: rgba(42, 200, 86, 0.88);
 }

@@ -93,6 +93,9 @@ nav i {
     flex-direction: column;
 }
 
+.home-icon{
+    margin-right: 16%;
+}
 .span {
     position: relative;
     width: 356px;
@@ -105,7 +108,11 @@ nav i {
     align-items: center;
     margin-top: 2%;
     font-size: 294%;
+    text-decoration: none;
+    color: black;
+    
 }
+
 
 .list {
     display: flex;
@@ -118,7 +125,7 @@ nav i {
 /* formato responsive para table */  
 @media screen and (min-width: 415px)  and (max-width: 1024px){
     .home-body {
-        height: 128vh;
+        height: 100vh;
         margin-top: 0px;
         background-size: 113%;
     }

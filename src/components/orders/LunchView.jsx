@@ -2,12 +2,25 @@ import React, { useState } from 'react';
 import LunchMenu from './LunchMenu';
 
 
-const LunchView = ({ item, cart, setCart, menu, sendSubTotal }) => {
+import { Icon, InlineIcon } from '@iconify/react';
+import delete24Regular from '@iconify/icons-fluent/delete-24-regular';
+// import circlePlus from '@iconify/icons-akar-icons/circle-plus';
+import less from '../../img/less.svg';
+import circlePlus from '../../img/circlePlus.svg';
+
+
+
+const LunchView = ({ item, cart, setCart, menu, sendSubTotal, key }) => {
 
   const { producto, precio, id } = item;
   const [quantity, setQuantity] = useState(1);
   const [subTotal, setSubTotal] = useState([]);
 
+
+  const iconDelete = <Icon icon={delete24Regular} style={{ color: '#ff0b0b', fontSize: '25px' }} />;
+  const iconCirclePlus =  <img src={circlePlus} alt='iconCirclePlus' className='quantity-icon'></img>;
+  // const iconCirclePlus = <Icon icon={circlePlus} style={{ fontSize: '31.722944259643555px' }} className='quantity-icon' />;
+  const iconLess = <img src={less} alt='iconLess' className='quantity-icon'></img>;
 
   //Funcion que agrega el producto a la Orden     
   const addProduct = id => {
@@ -31,46 +44,42 @@ const LunchView = ({ item, cart, setCart, menu, sendSubTotal }) => {
   //   setSubTotal(productSubTotal)
   // }
 
-  if(sendSubTotal){
+
+
+    //Sumar el total de los items
+    const productPrices = cart.map((item) => Math.floor(item.precio) * quantity); // Recorre el carrito y crea un nuevo array con los precios (NUMBER)
+    const grandTotal = productPrices.reduce((a, b) => a + b, 0); // reduce, toma todos los elementos en un array, y los reduce en un solo valor.
+    console.log(4, 'tota', grandTotal)
+
+
+  if (sendSubTotal) {
     sendSubTotal(productSubTotal);
   }
 
 
 
   return (
-    <div className='container menus'>
-         <div className=' unicard card'>
-          <h1 className='product-name' >{item.producto}</h1>
-          {item.img} 
-          <p className='product-price'>${item.precio}</p>
-          <button type='button' className='additional-button-egg'>Huevo: 500</button>
-          <button type='button' className='additional-button-cheese'>Queso: 500</button>
-            {menu ? (
-              (
-                <button type='button' className="add-button" onClick={() => addProduct(id)}>+ Añadir</button>
-            )
-          )
-          
-            : (
-              <div>
-                <div>
-                  <button onClick={() => setQuantity(quantity + 1)}>Sumar</button>
-                  {quantity > 0 ? (
-                    <h3>{quantity}</h3>
-                  )
-                    : (
-                      <h3>{deleteProduct(id)}</h3>
-                    )}
-                  <button onClick={() => setQuantity(quantity - 1)}>Restar</button>
-                </div>
-                <button type='button' onClick={() => deleteProduct(id)}>Eliminar</button>
-                <p>SubTotal = {productSubTotal}</p>
-              </div>
-            )
 
-          }
-      </div>
-    </div>
+
+    <tbody className=''>
+      <tr>
+        <th scope="row"><span onClick={() => deleteProduct(id)}>{iconDelete}</span></th>
+        <td className='name-product' colspan="2">{producto}</td>
+        <td className='div-quantity'>
+            <span><span onClick={incrementQuatity}>{iconCirclePlus}</span>
+              {quantity > 0 ? (
+                <span className="quantity-number">{quantity}</span>
+              )
+                : (
+                  <span>{deleteProduct(id)}</span>
+                )}
+              <span onClick={descrementQuatity}>{iconLess}</span></span>
+          {/* <p>SubTotal = {productSubTotal}</p> */}
+        </td>
+      </tr>
+    </tbody>
+
+
   )
 }
 export default LunchView;
