@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import LunchMenu from './LunchMenu';
+
+
 import { Icon, InlineIcon } from '@iconify/react';
 import delete24Regular from '@iconify/icons-fluent/delete-24-regular';
 // import circlePlus from '@iconify/icons-akar-icons/circle-plus';
@@ -13,34 +15,27 @@ const LunchView = ({ item, cart, setCart, menu, sendSubTotal, key }) => {
   const { producto, precio, id } = item;
   const [quantity, setQuantity] = useState(1);
   const [subTotal, setSubTotal] = useState([]);
+
+
   const iconDelete = <Icon icon={delete24Regular} style={{ color: '#ff0b0b', fontSize: '25px' }} />;
   const iconCirclePlus =  <img src={circlePlus} alt='iconCirclePlus' className='quantity-icon'></img>;
   // const iconCirclePlus = <Icon icon={circlePlus} style={{ fontSize: '31.722944259643555px' }} className='quantity-icon' />;
   const iconLess = <img src={less} alt='iconLess' className='quantity-icon'></img>;
 
-
-  // console.log(11, 'item', item)
-  // console.log(2, 'cart', cart )
-  // console.log(3, 'setCart', setCart)
-  // console.log(4, 'menu', menu)
-  // console.log(5, 'sendSubTotal', sendSubTotal )
-
-
   //Funcion que agrega el producto a la Orden     
   const addProduct = id => {
-    const items = menu.filter((item) => item.id === id);
-    setCart([...cart, ...items])
+    const item = menu.filter((item) => item.id === id);
+    setCart([...cart, ...item])//... spread operator  o spread syntax trae las propiedades del objeto
   }
 
   //Funcion para Eliminar una producto de la Orden
   const deleteProduct = (id) => {
     const orderedProduct = cart.filter(item => item.id !== id);
     setCart(orderedProduct);
-    console.log('Elimine', id)
   }
 
-  //Multiplica el precio por la cantidad de productos
-  const productSubTotal = precio * quantity;
+//Multiplica el precio por la cantidad de productos
+   const productSubTotal = precio * quantity;
 
 
   // //Multiplica el precio por la cantidad de productos
@@ -48,6 +43,8 @@ const LunchView = ({ item, cart, setCart, menu, sendSubTotal, key }) => {
   //   const productSubTotal = precio * quantity;
   //   setSubTotal(productSubTotal)
   // }
+
+
 
     //Sumar el total de los items
     const productPrices = cart.map((item) => Math.floor(item.precio) * quantity); // Recorre el carrito y crea un nuevo array con los precios (NUMBER)
@@ -60,22 +57,9 @@ const LunchView = ({ item, cart, setCart, menu, sendSubTotal, key }) => {
   }
 
 
-  const incrementQuatity = () => {
-    setQuantity(quantity + 1)
-  }
-  const descrementQuatity = () => {
-    setQuantity(quantity + -1)
-  }
-
-  // const quantityOfProducts = () => {
-  //   if(quantity > 0) {
-  //     <h3>{quantity}</h3>
-  //   } else {
-  //     <h3>{deleteProduct(id)}</h3>
-  //   }
-  // }
 
   return (
+
 
     <tbody className=''>
       <tr>
@@ -94,6 +78,7 @@ const LunchView = ({ item, cart, setCart, menu, sendSubTotal, key }) => {
         </td>
       </tr>
     </tbody>
+
 
   )
 }

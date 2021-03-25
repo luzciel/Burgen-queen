@@ -4,51 +4,54 @@ import "./Orders.css"
 import LunchView from './LunchView'
 
 
-const LunchMenu = () =>{
-    
-        const [menu, setMenu] = React.useState([])
+const LunchMenu = () => {
 
-            React.useEffect(() => {
-                getData()
-                console.log(menu)
-            }, [])
+    const [menuAlmuerzo, setMenu] = React.useState([])
 
-            const getData = async () => {
-                const data = await fetch('https://luzciel.github.io/Burgen-queen/src/data/menu.json')
-                const almuerzo = await data.json()
-                setMenu(almuerzo.almuerzo)
-                console.log(almuerzo.almuerzo)
-            }
-   
-        const [cart, setCart] =  React.useState([]) 
+    React.useEffect(() => {
+        getData()
+    }, [])
 
-        
-        // //Funcion que agrega el producto a la Orden     
-        // const addProduct = id => {
-        //     const product = menu.filter((item) => item.id === id)
-        //}
+    const getData = async () => {
+        const data = await fetch('https://luzciel.github.io/Burgen-queen/src/data/menu.json')
+        const fullMenu = await data.json()
+        setMenu(fullMenu.almuerzo)
+        console.log(fullMenu.almuerzo)
+    }
+
+    const [cart, setCart] = React.useState([])
+
+
+    //Funcion que agrega el producto a la Orden     
+    const addProduct = id => {
+        const item = menuAlmuerzo.filter((item) => item.id === id);
+        setCart([...cart, ...item])//... spread operator  o spread syntax trae las propiedades del objeto
+    }
+
 
     return (
-   
+
         <div className='container menus'>
-            <div className='lunch-menu card'>
-            <h2>Menu</h2>
-          { menu.map(item =>(
-              <LunchView 
-              key={item.id}
-              item={item}
-              cart={cart}
-              setCart={setCart}
-              menu={menu}
-              />
-              ))}   
+            <div className='lunch-menu '>
+                {
+                    menuAlmuerzo.map(item => (
+                        <div key={item.id} className='unicard card'>
+                            <h1 className='product-name' >{item.producto}</h1>
+                            {/* {item.img}  */}
+                            <button type='button' className='product-price'>${item.precio}</button>
+                            <button type='button' className='additional-button-egg'>Huevo: 500</button>
+                            <button type='button' className='additional-button-cheese'>Queso: 500</button>
+                            <button type='button' className="add-button" onClick={() => addProduct(item.id)}>+ Añadir</button>
+                        </div>
+                    ))
+                }
+            </div>
+            <div className='breakfast-cart'>
+                {<OrderDetail
+                    cart={cart}
+                    setCart={setCart} />}
             </div>
 
-            <div className='breakfast-cart'>
-            <OrderDetail
-            cart={cart}
-            setCart={setCart} />
-            </div>
 
         </div>
     )
