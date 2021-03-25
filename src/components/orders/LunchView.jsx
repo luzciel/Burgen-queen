@@ -12,7 +12,7 @@ const LunchView = ({ item, cart, setCart, menu, sendSubTotal }) => {
   //Funcion que agrega el producto a la Orden     
   const addProduct = id => {
     const item = menu.filter((item) => item.id === id);
-    setCart([...cart, ...item])
+    setCart([...cart, ...item])//... spread operator  o spread syntax trae las propiedades del objeto
   }
 
   //Funcion para Eliminar una producto de la Orden

@@ -34,6 +34,7 @@ const BreakfastMenu = () =>{
                      <div key={item.id}>
                          <ul>
                              <li>{item.producto}</li>
+                             <li>{item.img}</li>
                              <li>{item.precio}</li>
                              <button type='button' onClick={() => addProduct(item.id)}>Agregar</button>
                          </ul>
