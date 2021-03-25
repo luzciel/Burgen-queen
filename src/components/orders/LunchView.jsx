@@ -33,6 +33,14 @@ const LunchView = ({ item, cart, setCart, menu, sendSubTotal, key }) => {
     const orderedProduct = cart.filter(item => item.id !== id);
     setCart(orderedProduct);
   }
+   
+  const incrementQuatity = () => {
+    setQuantity(quantity + 1)
+  }
+  const descrementQuatity = () => {
+    setQuantity(quantity + -1)
+  }
+
 
 //Multiplica el precio por la cantidad de productos
    const productSubTotal = precio * quantity;
