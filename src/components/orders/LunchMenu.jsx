@@ -37,7 +37,7 @@ const LunchMenu = () => {
                     menuAlmuerzo.map(item => (
                         <div key={item.id} className='unicard card'>
                             <h1 className='product-name' >{item.producto}</h1>
-                            {/* {item.img}  */}
+                            <img src={item.img} alt="imgMenu"  className="product-image"/>
                             <button type='button' className='product-price'>${item.precio}</button>
                             <button type='button' className='additional-button-egg'>Huevo: 500</button>
                             <button type='button' className='additional-button-cheese'>Queso: 500</button>
