@@ -144,9 +144,8 @@
     width: 99.82px;
     border-style: unset;
     border-radius: 20px;
-    margin: -10px 0px 0px 77px;
-
-
+    margin: -2px 0px 0px 77px;
+    box-shadow: 0 10px 14px -7px #5b5b5f;
   }
 
   .product-name{
@@ -223,5 +222,5 @@
   }
 
  .orders-container{
-  background-color:rgba(203, 203, 203, 0.42);
+  background-color:rgba(203, 203, 203, 0.11);
  }
