@@ -10,8 +10,7 @@
     font-family: 'Poppins', sans-serif;
     color: #454040;
     font-weight: 700;
-    margin-left: 5%;
-    margin-top: 2%;
+    margin: 4% 0 6% 5%;
 }
 
 .empty-cart{
@@ -20,9 +19,9 @@
 
 .name-product{
     font-family: 'Roboto Slab', serif;
-    font-weight: 400;
+    font-weight: 500;
     color: #817B7B;
-    font-size: 140%;
+    font-size: 129%;
     padding-right: 0 !important;
     padding-left: 0 !important;
     width: 67%;
@@ -31,10 +30,11 @@
 .div-quantity{
     padding-right: 0 !important;
     padding-left: 0 !important; 
+    width: 29%;
 }
 
 .quantity-number{
-    margin: 0 8%;
+    margin: 0 5% 0 2%;
 }
 
 .quantity-icon{
@@ -46,12 +46,12 @@
     font-weight: bold;
     display: flex;
     justify-content: space-between;
-    margin: 0 5%;
+    margin: 0 5% 4% 57%;
 }
 
 .total {
     font-weight: bold;
-    font-size: 182%;
+    font-size: 141%;
 }
 .div-btn{
     display: flex;
@@ -62,9 +62,11 @@
 .btn-cancel, .btn-send {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
-    font-weight: bold;
+    font-size: 126%;
+    font-weight: 800;
     color: #FFFFFF;
     border-radius: 22px;
+    width: 160px;
 }
 
 .btn-cancel{
