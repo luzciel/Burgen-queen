@@ -20,7 +20,7 @@
         },
         {
             "id": 4,
-            "producto": "Jugo de frutas natural",
+            "producto": "Jugo de frutas",
             "precio": "700",
             "img": "https://i.imgur.com/rQc0izk.jpeg",
             "opciones": [
