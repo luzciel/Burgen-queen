@@ -9,11 +9,8 @@ const OrdersInputs = (props) =>{
             <input type="text" className="clientName" placeholder="Nombre Cliente"/>
             <input type="text" className="waiterName" placeholder="Garzón" />
             {/* <input type="text" className="tableNumber" placeholder="Mesa" value={`Mesa ${props.match.params.numTable}`} />
-            <hr className="hrOrders"></hr> */}
-        
-            
+            <hr className="hrOrders"></hr> */   
         </Fragment>
-
 
     )
 }
