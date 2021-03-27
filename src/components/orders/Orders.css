@@ -116,16 +116,20 @@
     .breakfast-menu {
         display: flex;
         flex-wrap: wrap;
+    }
 
-
+    .lunch-menu {
+      display: flex;
+      flex-wrap: wrap;
     }
 
   .unicard {
     box-shadow: 0 10px 14px -7px #5b5b5f;
-    width: 262.99px;
+    width: 257.99px;
     height: 320.2px;
     margin: 10px 7px 30px 10px;
     border-radius: 20px;
+    justify-content: center;
 
 
 
@@ -147,8 +151,9 @@
 
   .product-name{
     font-family: 'Berkshire Swash', cursive;
-    font-size: 27px;
-    margin: 15px 36px;
+    font-size: 25px;
+    margin: 0px 0px 0px 20px;
+
 
   }
 
@@ -163,7 +168,8 @@
     transition-duration: 0.7s;
     cursor: pointer;
     border: 2px solid rgba(254, 120, 0, 1) ;
-    margin: 15px 2px 4px 24px;
+    margin: 4px 2px 4px 24px;
+
 
 
   }
@@ -208,9 +214,12 @@
   }
 
   .product-image{
-    width: 150px;
+    width: 122px;
     height: 100px;
     border-radius: 20px;
+    margin: 10px 0px 0px 67px;
+
+
   }
 
  .inputsContainer{
