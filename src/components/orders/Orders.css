@@ -36,15 +36,15 @@
 }
 
 .tableNumber{
-    margin: 0px 0px 0px 598px;
-    font-family: 'Poppins', sans-serif;
-    border-radius: 5px;
-    border: 3px solid #FE7800;
-    background-color: #F6F1F1;
-    padding: 15px;
-    height: 38px;
-    width: 87px;
-    outline: none;
+  margin: 0px 0px 0px 11px;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 5px;
+  border: 3px solid #FE7800;
+  background-color: #F6F1F1;
+  padding: 15px;
+  height: 38px;
+  width: 16%;
+  outline: none;
 
 }
 
