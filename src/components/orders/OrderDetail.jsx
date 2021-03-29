@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 // import LunchMenu from './LunchMenu';
 import LunchView from './LunchView';
 import SendKitchen from './SendKitchen';
-import { db } from '../../firebase'
+// import { db } from '../../firebase'
 import './OrderDetail.css'
 
 const OrderDetail = ({ cart, setCart }) => {
@@ -20,14 +20,14 @@ const OrderDetail = ({ cart, setCart }) => {
     if (cart.length === 0) {
       return <p className='empty-cart'>Agrega productos a la orden</p>;
     } else {
-      return cart.map(((item, index) => <LunchView key={index + "menu"} item={item} cart={cart} setCart={setCart} sendSubTotal={getSubTotal} />))
+      return cart.map(((item, index) => <LunchView key={index + "menu"} itemIndex={index} item={item} cart={cart} setCart={setCart} sendSubTotal={getSubTotal} />))
     }
   }
 
-  const addCollectionOrders = async (product) => {
-    await db.collection('orders').doc().set(product)
-    console.log("NEW COLECTION")
-  }
+  // const addCollectionOrders = async (product) => {
+  //   await db.collection('orders').doc().set(product)
+  //   console.log("NEW COLECTION")
+  // }
 
   return (
     <div className='orders-detail col-sm'>

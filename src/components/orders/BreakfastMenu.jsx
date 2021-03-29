@@ -2,7 +2,7 @@ import React from 'react'
 import OrderDetail from './OrderDetail'
 import "./Orders.css"
 
-const BreakfastMenu = () =>{
+const BreakfastMenu = (props) =>{
     
         const [menu, setMenu] = React.useState([])
 

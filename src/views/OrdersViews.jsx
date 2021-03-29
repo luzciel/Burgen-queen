@@ -7,7 +7,8 @@ import OrdersInputs from '../components/orders/OrdersInputs'
 //import orders from '../components/orders/OrdersInputs'
 import LunchMenu from '../components/orders/LunchMenu'
 import OrderDetail from '../components/orders/OrderDetail'
-import LunchView from '../components/orders/LunchView'
+import LunchView from '../components/orders/LunchView';
+// import { db } from '../../firebase'
 
 
 
@@ -29,6 +30,12 @@ const OrdersViews = (props) => {
     setshowBreakfast(false)
     setShowLunch(true)
   }
+
+  // // Funcion que agrega la colleccion a firebase
+  // const addCollectionOrders = async (product) => {
+  //   await db.collection('orders').doc().set(product)
+  //   console.log("NEW COLECTION")
+  // }
   
   return (
     <div className="inputsContainer">
@@ -42,7 +49,7 @@ const OrdersViews = (props) => {
          lunchClick={()=>{toggleLunch()}}
          /> 
 
-        {showBreakfast ? <BreakfastMenu/> : <LunchMenu/> } {/* si showBreakfast es true se muestre el menu del desayuno y sino se muestre el menu del almuerzo  */}
+        {showBreakfast ? <BreakfastMenu addCollectionOrders/> : <LunchMenu/> } {/* si showBreakfast es true se muestre el menu del desayuno y sino se muestre el menu del almuerzo  */}
 
     
     </div>
@@ -52,6 +59,31 @@ const OrdersViews = (props) => {
 }
 
 export default OrdersViews
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // // class OrdersViews extends React.Component{ //extiende la funcionalidad del componenete - orderViews es el padre
 // //     constructor(props) {
