@@ -36,7 +36,7 @@
 }
 
 .tableNumber{
-    margin: 0px 0px 0px 598px;
+    margin: 0px 0px 0px 8px;
     font-family: 'Poppins', sans-serif;
     border-radius: 5px;
     border: 3px solid #FE7800;
@@ -130,15 +130,15 @@
     margin: 10px 7px 30px 10px;
     border-radius: 20px;
     justify-content: center;
-
-
+    /* background-color: #d7d7d7; */
+    background-color: #ffb437;
 
   }
 
   .add-button{
     width: 132.82px;
     height: 37.39px;
-    background-color: rgba(254, 120, 0, 1);
+    background-color: #D22704;;
     color: white;
     font-family: 'Poppins', sans-serif;
     width: 99.82px;
@@ -215,12 +215,28 @@
   .product-image{
     width: 122px;
     height: 100px;
-    border-radius: 20px;
+    border-radius: 83px;
     margin: 10px 0px 0px 67px;
 
 
   }
 
  .orders-container{
-  background-color:rgba(203, 203, 203, 0.11);
+  /* background-color:rgba(203, 203, 203, 0.11); */
+
+ background-color:  white;
+  
+ }
+
+ .form-select{
+  margin: -27px 0px 0px 73px;
+  width: 100px;
+  height: 30px;
+  background-color: white;
+  color: black;
+  border-style: unset;
+  box-shadow: 0 10px 14px -7px #5b5b5f;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 20px;
+  margin: -25px 17px 15px 78px;
  }

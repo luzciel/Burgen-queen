@@ -19,7 +19,7 @@ const Home = () => {
         <Link to='/cocina'>
           <span class='opcion-kitchen span'>
             <img src={kitchen} alt='kitchen' className='kitchen-icon home-icon'></img>
-                  Mesas</span>
+                  Cocina</span>
         </Link>
       </div>
     </div>

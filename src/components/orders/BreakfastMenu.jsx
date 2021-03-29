@@ -3,11 +3,10 @@ import OrderDetail from './OrderDetail'
 import "./Orders.css"
 
 const BreakfastMenu = () =>{
-    
+        //trayendo la data del menu
         const [menu, setMenu] = React.useState([])
 
             React.useEffect(() => {
-                console.log('useEffect')
                 getData()
             }, [])
 
@@ -26,6 +25,13 @@ const BreakfastMenu = () =>{
             setCart([...cart, ...item])
         }
 
+        //subcategorias  ****
+        const subcategories = function (e) {
+            const option = e.target.value;
+            console.log(option)
+            setMenu(option)
+        }
+
     return (
         <div className='container menus'>
         <div className='breakfast-menu '>
@@ -34,7 +40,19 @@ const BreakfastMenu = () =>{
                      <div key={item.id}  className='unicard card'>
                              <h1 className='product-name' >{item.producto}</h1>
                              <img src={item.img} alt="imgMenu"  className="product-image" />
-                             <button type='button' className='product-price'>${item.precio}</button>
+                             <button type='button' className='product-price'>${item.precio}
+                              
+                              {/* *** */}
+                             <select class="form-select" aria-label="Default select example">
+                                <option selected>select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                             </select>
+                               
+                               {/* *** */}
+
+                             </button>
                              <button type='button' className='additional-button-egg'>Huevo: 500</button>
                              <button type='button' className='additional-button-cheese'>Queso: 500</button>
                              <button type='button' className="add-button" onClick={() => addProduct(item.id)}>+ Añadir</button>
