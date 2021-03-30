@@ -7,7 +7,7 @@ const OrdersInputs = (props) =>{
     return (
         <Fragment>
             <input type="text" className="clientName" placeholder="Nombre Cliente"/>
-            <input type="text" className="waiterName" placeholder="Garzón" /> 
+            <input type="text" className="waiterName" placeholder="Garzón" />
         </Fragment>
 
 

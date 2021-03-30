@@ -7,7 +7,7 @@ import circlePlus from '../../img/circlePlus.svg';
 
 
 
-const LunchView = ({ item, cart, setCart, almuerzoMenu, sendSubTotal, key }) => {
+const LunchView = ({ itemIndex, item, cart, setCart, almuerzoMenu, sendSubTotal, key }) => {
 
   const { producto, precio, id } = item;
   const [quantity, setQuantity] = useState(1);
@@ -26,10 +26,13 @@ const LunchView = ({ item, cart, setCart, almuerzoMenu, sendSubTotal, key }) => 
   }
    
   const incrementQuatity = () => {
-    setQuantity(quantity + 1)
+    cart[itemIndex].quantity = cart[itemIndex].quantity === undefined ? 1:  cart[itemIndex].quantity + 1;
+    setQuantity(cart[itemIndex].quantity)
+    //setQuantity(quantity + 1)
   }
   const descrementQuatity = () => {
-    setQuantity(quantity + -1)
+    cart[itemIndex].quantity = cart[itemIndex].quantity === undefined ? 1:  cart[itemIndex].quantity - 1;
+    setQuantity(cart[itemIndex].quantity)
   }
 
 
@@ -56,7 +59,7 @@ const LunchView = ({ item, cart, setCart, almuerzoMenu, sendSubTotal, key }) => 
   if (sendSubTotal) {
     sendSubTotal(productSubTotal);
   }
-
+  
 
   // const quantityOfProducts = () => {
   //   if(quantity > 0) {
