@@ -1,43 +1,46 @@
-import React from "react";
-import OrderDetail from "./OrderDetail";
-import "./Orders.css";
-import LunchView from "./LunchView";
 
-const LunchMenu = () => {
-  const [menuAlmuerzo, setMenu] = React.useState([]);
+import React from 'react'
+import OrderDetail from './OrderDetail'
+import "./Orders.css"
+import LunchView from './LunchView'
+import { v4 as uuidv4 } from 'uuid';
+  
+  const LunchMenu = () => {
 
-  React.useEffect(() => {
-    getData();
-  }, []);
+    const [menuAlmuerzo, setMenu] = React.useState([])
 
-  const getData = async () => {
-    const data = await fetch(
-      "https://luzciel.github.io/Burgen-queen/src/data/menu.json"
-    );
-    const fullMenu = await data.json();
-    setMenu(fullMenu.almuerzo);
-    console.log(fullMenu.almuerzo);
-  };
+    React.useEffect(() => {
+        getData()
+    }, [])
 
-  const [cart, setCart] = React.useState([]);
+    const getData = async () => {
+        const data = await fetch('https://luzciel.github.io/Burgen-queen/src/data/menu.json')
+        const fullMenu = await data.json()
+        setMenu(fullMenu.almuerzo)
+        console.log(fullMenu.almuerzo)
+    }
+  
+  
+  //Funcion que agrega el producto a la Orden     
+    const addProduct = id => {
+        const item = menuAlmuerzo.filter((item) => item.id === id);
+        const product= {};
+        const listCars = item.map((item) => {
+        product.id = uuidv4();
+        product.producto = item.producto;
+        product.opcion ='';  //aqui deberia ir la opcion pollo, carne, veg
+        product.precio = item.precio;
+        product.cantidad = 1;
+        product.extraHuevo = false; // true o false
+        product.extraQueso = false; // true o false
+    })
 
-  //Funcion que agrega el producto a la Orden
-  const addProduct = (id) => {
-    const item = menuAlmuerzo.filter((item) => item.id === id);
-    const product = {};
-    const listCars = item.map((item) => {
-      product.id = item.id;
-      product.producto = item.producto;
-      product.opcion = ""; //aqui deberia ir la opcion pollo, carne, veg
-      product.precio = item.precio;
-      product.cantidad = 1;
-      product.extraHuevo = false; // true o false
-      product.extraQueso = false; // true o false
-    });
+    setCart([...cart, product])//... spread operator  o spread syntax trae las propiedades del objeto
+        console.log(cart, 5555)
+    };
 
-    setCart([...cart, product]); //... spread operator  o spread syntax trae las propiedades del objeto
-    console.log(cart, 5555);
-  };
+    console.log(cart, 77777777777777777777777)
+
 
   return (
     <div className="container menus">
@@ -103,3 +106,16 @@ const LunchMenu = () => {
 };
 
 export default LunchMenu;
+
+
+
+
+
+    
+    
+
+
+
+    
+   
+

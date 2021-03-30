@@ -7,27 +7,21 @@ import './OrderDetail.css'
 
 const OrderDetail = ({ cart, setCart }) => {
 
-  //Sumar el total de los items
-  const productPrices = cart.map((item) => Math.floor(item.precio)); // Recorre el carrito y crea un nuevo array con los precios (NUMBER)
-  const grandTotal = productPrices.reduce((a, b) => a + b, 0); // reduce, toma todos los elementos en un array, y los reduce en un solo valor.
+  //Sumar el total de los items. Recorre el carrito y crea un nuevo array con los precios (NUMBER)
+  console.log('ordenDeatil', cart)
+  const productPrices = cart.map((item) => Math.floor(item.precio) * item.cantidad); 
 
-  const getSubTotal = (subTotal) => {
-    // console.log("HELLOOOOOOO", subTotal)
-  }
+  // reduce, toma todos los elementos en un array, y los reduce en un solo valor.
+  const grandTotal = productPrices.reduce((a, b) => a + b, 0); 
 
   //Funcion que detalla el contenido de la orden si esta tiene un lenght diferente a 0
   const listLunchView = () => {
     if (cart.length === 0) {
       return <p className='empty-cart'>Agrega productos a la orden</p>;
     } else {
-      return cart.map(((item, index) => <LunchView key={index + "menu"} itemIndex={index} item={item} cart={cart} setCart={setCart} sendSubTotal={getSubTotal} />))
+      return cart.map(((item, index) => <LunchView key={index + "menu"} itemIndex={index} item={item} cart={cart} setCart={setCart}/>))
     }
   }
-
-  // const addCollectionOrders = async (product) => {
-  //   await db.collection('orders').doc().set(product)
-  //   console.log("NEW COLECTION")
-  // }
 
   return (
     <div className='orders-detail col-sm'>
