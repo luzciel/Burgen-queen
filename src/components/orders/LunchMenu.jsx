@@ -59,7 +59,7 @@ const LunchMenu = () => {
                     aria-label="Default select example">
                     {item.opciones.map((x) => (
                       <option value={x.id} key={x.id}>
-                        {x.opcion}
+                        {x.opcion} ${x.precio}
                       </option>
                     ))}
                   </select>
