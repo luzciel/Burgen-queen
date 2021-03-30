@@ -2,6 +2,7 @@ import React from 'react'
 import OrderDetail from './OrderDetail'
 import "./Orders.css"
 import LunchView from './LunchView'
+import { v4 as uuidv4 } from 'uuid';
 
 
 const LunchMenu = () => {
@@ -19,8 +20,12 @@ const LunchMenu = () => {
         console.log(fullMenu.almuerzo)
     }
 
+    
     const [cart, setCart] = React.useState([])
-
+    
+    React.useEffect(() => {
+        console.log(666666666666666666) 
+    }, [cart])
 
 
 
@@ -29,7 +34,7 @@ const LunchMenu = () => {
         const item = menuAlmuerzo.filter((item) => item.id === id);
         const product= {}
         const listCars = item.map((item) => {
-        product.id = item.id;
+        product.id = uuidv4();
         product.producto = item.producto;
         product.opcion ='';  //aqui deberia ir la opcion pollo, carne, veg
         product.precio = item.precio;
@@ -43,7 +48,7 @@ const LunchMenu = () => {
     }
 
 
-
+    console.log(cart, 77777777777777777777777)
 
 
     return (
@@ -64,9 +69,9 @@ const LunchMenu = () => {
                 }
             </div>
             <div className='breakfast-cart'>
-                {<OrderDetail
+                <OrderDetail
                     cart={cart}
-                    setCart={setCart} />}
+                    setCart={setCart} />
             </div>
 
 
