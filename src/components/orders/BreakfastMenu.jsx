@@ -1,60 +1,85 @@
-import React from 'react'
-import OrderDetail from './OrderDetail'
-import "./Orders.css"
+import React from "react";
+import OrderDetail from "./OrderDetail";
+import "./Orders.css";
 
-const BreakfastMenu = (props) =>{
-    
-        const [menu, setMenu] = React.useState([])
+const BreakfastMenu = (props) => {
+  const [menu, setMenu] = React.useState([]);
 
-            React.useEffect(() => {
-                console.log('useEffect')
-                getData()
-            }, [])
+  React.useEffect(() => {
+    getData();
+  }, []);
 
-            const getData = async () => {
-                const data = await fetch('https://luzciel.github.io/Burgen-queen/src/data/menu.json')
-                const desayuno = await data.json()
-                
-                setMenu(desayuno.desayuno)
-            }
+  const getData = async () => {
+    const data = await fetch(
+      "https://luzciel.github.io/Burgen-queen/src/data/menu.json"
+    );
+    const desayuno = await data.json();
 
-            const [cart, setCart] =  React.useState([]) 
+    setMenu(desayuno.desayuno);
+  };
 
-        //Funcion que agrega el producto a la Orden     
-        const addProduct = id => {
-            const item = menu.filter((item) => item.id === id);
-            setCart([...cart, ...item])
-        }
+  const [cart, setCart] = React.useState([]);
 
-    return (
-        <div className='container menus'>
-        <div className='breakfast-menu '>
-            {
-                 menu.map( item =>(
-                     <div key={item.id}  className='unicard card'>
-                             <h1 className='product-name' >{item.producto}</h1>
-                             <img src={item.img} alt="imgMenu"  className="product-image" />
-                             <button type='button' className='product-price'>${item.precio}</button>
-                             <button type='button' className='additional-button-egg'>Huevo: 500</button>
-                             <button type='button' className='additional-button-cheese'>Queso: 500</button>
-                             <button type='button' className="add-button" onClick={() => addProduct(item.id)}>+ Añadir</button>
-                         </div>   
-                 ))
-            } 
-        </div>
-            <div className='breakfast-cart'>
-            {<OrderDetail
-            cart={cart}
-            setCart={setCart} />}
-            </div>
+  //Funcion que agrega el producto a la Orden
+  const addProduct = (id) => {
+    const item = menu.filter((item) => item.id === id);
+    setCart([...cart, ...item]);
+  };
 
-              
-        </div>
-    )
+  //subcategorias  ****
+  const subcategories = function (e) {
+    const option = e.target.value;
+    console.log(option);
+    setMenu(option);
+  };
 
-}
+  return (
+    <div className="container menus">
+      <div className="breakfast-menu ">
+        {menu.map((item) => (
+          <div key={item.id} className="unicard card">
+            <h1 className="product-name">{item.producto}</h1>
+            <img src={item.img} alt="imgMenu" className="product-image" />
+            <button type="button" className="product-price">
+              ${item.precio}
+            </button>
 
+            {/* si item tiene opciones, recorre "opciones" y muestrame un select con las opciones */}
+            {(() => {
+                if (item.opciones) {
+                  return (
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      
+                      {item.opciones.map((x) => (
+                        <option value={x.id} key={x.id}>
+                          {x.opcion}
+                        </option>
+                      ))}
+                    </select>
+                  );
+                }
+              })()}
 
-export default BreakfastMenu
+            {/* boton añadir a la orden */}
+            <button
+              type="button"
+              className="add-button"
+              onClick={() => addProduct(item.id)}
+            >
+              + Añadir
+            </button>
+          </div>
+        ))}
+      </div>
+      {/* carrito que que contiene la orden desayuno */}
+      <div className="breakfast-cart">
+        {<OrderDetail cart={cart} setCart={setCart} />}
+      </div>
+    </div>
+  );
+};
 
-
+export default BreakfastMenu;

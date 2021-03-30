@@ -4,7 +4,6 @@ import './tables.css'
 import {Link} from "react-router-dom";
 
 const Tables = () => {
-    console.log("Mesasssss")
     return (
         <div className='container-views-tables'>
            <div className='text-tables'>

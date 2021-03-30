@@ -1,10 +1,8 @@
 import React from 'react'
 import "../components/orders/Orders.css"
-// import OrdersInpunts from '../components/orders/OrdersInputs'
 import MenuButtons from '../components/orders/MenuButtons'
 import BreakfastMenu from '../components/orders/BreakfastMenu'
 import OrdersInputs from '../components/orders/OrdersInputs'
-//import orders from '../components/orders/OrdersInputs'
 import LunchMenu from '../components/orders/LunchMenu'
 import OrderDetail from '../components/orders/OrderDetail'
 import LunchView from '../components/orders/LunchView';
@@ -38,7 +36,7 @@ const OrdersViews = (props) => {
   // }
   
   return (
-    <div className="inputsContainer">
+    <div className="orders-container">
         <OrdersInputs/>
         <input type="text" className="tableNumber" placeholder="Mesa" value={`Mesa ${props.match.params.numTable}`} />
         <hr className="hrOrders"></hr>
