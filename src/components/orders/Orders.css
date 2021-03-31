@@ -200,15 +200,14 @@
 
   .product-price{
     width: 100px;
-    height: 30px;
+    height: 26px;
     background-color:  white;
     color: black; 
     border-style: unset;
     box-shadow: 0 10px 14px -7px #5b5b5f;
     font-family: 'Poppins', sans-serif;
     border-radius: 20px;
-    margin: 2px 17px 15px 78px;
-
+    margin: 6px 17px 15px 78px;
 
   }
 
@@ -228,15 +227,15 @@
   
  }
 
- .form-select{
+ .form-select {
   margin: -27px 0px 0px 73px;
-  width: 100px;
-  height: 30px;
+  width: 203px;
+  height: 37px;
   background-color: white;
   color: black;
   border-style: unset;
   box-shadow: 0 10px 14px -7px #5b5b5f;
   font-family: 'Poppins', sans-serif;
   border-radius: 20px;
-  margin: -25px 17px 15px 78px;
- }
+  margin: -43px 17px 15px 34px;
+}
