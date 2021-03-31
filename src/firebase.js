@@ -1,5 +1,6 @@
-import firebase from 'firebase/app'
-import 'firebase/firestore'
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+
 var firebaseConfig = {
     apiKey: "AIzaSyAGXSbF4BWmw0d38n_5SWfLnO8dyoXe610",
     authDomain: "burgue-queen.firebaseapp.com",

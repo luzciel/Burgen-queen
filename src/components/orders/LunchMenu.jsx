@@ -1,7 +1,8 @@
 import React from 'react'
-import OrderDetail from './OrderDetail'
-import "./Orders.css"
-import LunchView from './LunchView'
+import OrderDetail from './OrderDetail';
+import "./Orders.css";
+import LunchView from './LunchView';
+import { db } from '../../firebase.js';
 import { v4 as uuidv4 } from 'uuid';
 
 
@@ -24,7 +25,6 @@ const LunchMenu = () => {
     const [cart, setCart] = React.useState([])
     
     React.useEffect(() => {
-        console.log(666666666666666666) 
     }, [cart])
 
 
@@ -44,12 +44,25 @@ const LunchMenu = () => {
     })
 
     setCart([...cart, product])//... spread operator  o spread syntax trae las propiedades del objeto
-        console.log(cart, 5555)
     }
 
+        // Funcion que agrega la colleccion a firebase
+  const addCollectionOrders = async (order) => {
+    await db.collection('Orders').add({
+        product: order,
+      })
+      .then(function (docRef) {
+        console.log("NEW COLECTION")
+      })
+      .catch(function (error) {
+        console.error("Error adding document: ", error);
+      });
+  };
+  
 
-    console.log(cart, 77777777777777777777777)
-
+//     const addCollectionOrders = () => {
+//     console.log("NEW COLECTION")
+//   }
 
     return (
 
@@ -71,7 +84,8 @@ const LunchMenu = () => {
             <div className='breakfast-cart'>
                 <OrderDetail
                     cart={cart}
-                    setCart={setCart} />
+                    setCart={setCart}
+                    addCollectionOrders={addCollectionOrders}/>
             </div>
 
 
