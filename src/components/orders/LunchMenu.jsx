@@ -46,10 +46,12 @@ const LunchMenu = () => {
     setCart([...cart, product])//... spread operator  o spread syntax trae las propiedades del objeto
     }
 
-        // Funcion que agrega la colleccion a firebase
+    // Funcion que agrega la colleccion a firebase
   const addCollectionOrders = async (order) => {
     await db.collection('Orders').add({
+        dateOrder: new Date(),
         product: order,
+        status: "En espera",
       })
       .then(function (docRef) {
         console.log("NEW COLECTION")

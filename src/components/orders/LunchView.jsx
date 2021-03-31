@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import LunchMenu from './LunchMenu';
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import delete24Regular from '@iconify/icons-fluent/delete-24-regular';
 import less from '../../img/less.svg';
 import circlePlus from '../../img/circlePlus.svg';
@@ -60,7 +60,7 @@ const LunchView = ({ itemIndex, item, cart, setCart, sendSubTotal }) => {
             <span><span onClick={incrementQuatity}>{iconCirclePlus}</span>
             <span className="quantity-number">{cantidad}</span>
             <span onClick={descrementQuatity}>{iconLess}</span></span>
-          <p>SubTotal = {productSubTotal}</p>
+          {/* <p>SubTotal = {productSubTotal}</p> */}
         </td>
       </tr>
     </tbody>
