@@ -48,41 +48,7 @@ const LunchView = ({ itemIndex, item, cart, setCart, sendSubTotal }) => {
 
 
   //Multiplica el precio por la cantidad de productos
-
-  const productSubTotal = precio * quantity;
-
-
-  // //Multiplica el precio por la cantidad de productos
-  // const addSubTotal = () => {
-  //   const productSubTotal = precio * quantity;
-  //   setSubTotal(productSubTotal)
-  // }
-
-
-
-    //Sumar el total de los items
-    const productPrices = cart.map((item) => Math.floor(item.precio) * quantity); // Recorre el carrito y crea un nuevo array con los precios (NUMBER)
-    console.log('productPrices', productPrices)
-    const grandTotal = productPrices.reduce((a, b) => a + b, 0); // reduce, toma todos los elementos en un array, y los reduce en un solo valor.
-    
-    console.log('grandTotal', grandTotal)
-
-
-  if (sendSubTotal) {
-    sendSubTotal(productSubTotal);
-  }
-  
-
-  // const quantityOfProducts = () => {
-  //   if(quantity > 0) {
-  //     <h3>{quantity}</h3>
-  //   } else {
-  //     <h3>{deleteProduct(id)}</h3>
-  //   }
-  // }
-
   const productSubTotal = precio * cantidad;
-
 
   return (
 
