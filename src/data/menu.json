@@ -14,26 +14,29 @@
         },
         {
             "id": 3,
-            "producto": "Sandwich de jamón y queso",
+            "producto": "Sandwich",
             "precio": "1000",
             "img": "https://i.imgur.com/QEAzA1f.jpg"
         },
         {
             "id": 4,
-            "producto": "Jugo de frutas natural",
+            "producto": "Jugo de frutas",
             "precio": "700",
             "img": "https://i.imgur.com/rQc0izk.jpeg",
             "opciones": [
                 {
                     "id": 41,
+                    "precio": "700",
                     "opcion": "Fresa"
                 },
                 {
                     "id": 42,
+                    "precio": "700",
                     "opcion": "Naranja"
                 },
                 {
                     "id": 43,
+                    "precio": "700",
                     "opcion": "Frambuesa"
                 }
             ]
@@ -48,14 +51,17 @@
             "opciones": [
                 {
                     "id": 51,
+                    "precio": "1500",
                     "opcion": "Res"
                 },
                 {
                     "id": 52,
+                    "precio": "1500",
                     "opcion": "Pollo"
                 },
                 {
                     "id": 53,
+                    "precio": "1500",
                     "opcion": "Vegetariana"
                 }
             ],
@@ -79,14 +85,17 @@
             "opciones": [
                 {
                     "id": 61,
+                    "precio": "3000",
                     "opcion": "Res"
                 },
                 {
                     "id": 62,
+                    "precio": "3000",
                     "opcion": "Pollo"
                 },
                 {
                     "id": 63,
+                    "precio": "3000",
                     "opcion": "Vegetariana"
                 }  
             ],
@@ -124,10 +133,12 @@
             "opciones": [
                 {
                     "id": 91,
+                    "precio": "500",
                     "opcion": "Con gas"
                 },
                 {
                     "id": 92,
+                    "precio": "500",
                     "opcion": "Sin gas"
                 }
             ]
@@ -140,10 +151,12 @@
             "opciones": [
                 {
                     "id": 101,
+                    "precio": "700",
                     "opcion": "Con gas"
                 },
                 {
                     "id": 102,
+                    "precio": "700",
                     "opcion": "Sin gas"
                 }
             ]
@@ -156,14 +169,17 @@
             "opciones": [
                 {
                     "id": 111,
+                    "precio": "700",
                     "opcion": "Coca-cola"
                 },
                 {
                     "id": 112,
+                    "precio": "700",
                     "opcion": "Fanta"
                 },
                 {
                     "id": 113,
+                    "precio": "700",
                     "opcion": "Canada dry"
                 }
             ]
@@ -176,14 +192,17 @@
             "opciones": [
                 {
                     "id": 121,
+                    "precio": "1000",
                     "opcion": "Coca-cola"
                 },
                 {
                     "id": 122,
+                    "precio": "1000",
                     "opcion": "Fanta"
                 },
                 {
                     "id": 123,
+                    "precio": "1000",
                     "opcion": "Canada dry"
                 }
             ]

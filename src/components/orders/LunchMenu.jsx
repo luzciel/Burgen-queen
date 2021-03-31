@@ -65,22 +65,61 @@ const LunchMenu = () => {
 //   }
 
     return (
-
-        <div className='container menus'>
-            <div className='lunch-menu '>
-                {
-                    menuAlmuerzo.map(item => (
-                        <div key={item.id} className='unicard card'>
-                            <h1 className='product-name' >{item.producto}</h1>
-                            <img src={item.img} alt="imgMenu"  className="product-image"/>
-                            <button type='button' className='product-price'>${item.precio}</button>
-                            <button type='button' className='additional-button-egg' >Huevo: 500</button>
-                            <button type='button' className='additional-button-cheese'>Queso: 500</button>
-                            <button type='button' className="add-button" onClick={() => addProduct(item.id)}>+ Añadir</button>
-                        </div>
-                    ))
+      <div className="container menus">
+        <div className="lunch-menu ">
+          {menuAlmuerzo.map((item) => (
+            <div key={item.id} className="unicard card">
+              <h1 className="product-name">{item.producto}</h1>
+              <img src={item.img} alt="imgMenu" className="product-image" />
+              <button type="button" className="product-price">
+                ${item.precio}
+              </button>
+  
+              {/* si item tiene opciones, recorre "opciones" y muestrame un select con las opciones */}
+              {(() => {
+                if (item.opciones) {
+                  return (
+                    <select
+                      class="form-select"
+                      aria-label="Default select example">
+                      {item.opciones.map((x) => (
+                        <option value={x.id} key={x.id}>
+                          {x.opcion} ${x.precio}
+                        </option>
+                      ))}
+                    </select>
+                  );
                 }
+              })()}
+  
+              {/* extras */} 
+              {/* si item tiene extra, recorre "extra" y muestrame un boton con los extras (huevo-queso) */}
+              {(() => {
+                if (item.extra) {
+                  return (
+                      <div>
+                      {item.extra.map((x) => (
+                        <button type="button" className="additional-button-egg" key={x.id} >
+                       {x.adicional}: ${x.precio}
+                      </button>
+                      ))}
+                      </div>
+                    
+                  );
+                }
+              })()}
+  
+  
+              <button
+                type="button"
+                className="add-button"
+                onClick={() => addProduct(item.id)}
+              >
+                + Añadir
+              </button>
             </div>
+          ))}
+        </div>
             <div className='breakfast-cart'>
                 <OrderDetail
                     cart={cart}
@@ -96,3 +135,16 @@ const LunchMenu = () => {
 
 
 export default LunchMenu
+
+
+
+
+
+    
+    
+
+
+
+    
+   
+

@@ -36,15 +36,15 @@
 }
 
 .tableNumber{
-  margin: 0px 0px 0px 11px;
-  font-family: 'Poppins', sans-serif;
-  border-radius: 5px;
-  border: 3px solid #FE7800;
-  background-color: #F6F1F1;
-  padding: 15px;
-  height: 38px;
-  width: 16%;
-  outline: none;
+    margin: 0px 0px 0px 8px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    border: 3px solid #FE7800;
+    background-color: #F6F1F1;
+    padding: 15px;
+    height: 38px;
+    width: 87px;
+    outline: none;
 
 }
 
@@ -116,39 +116,43 @@
     .breakfast-menu {
         display: flex;
         flex-wrap: wrap;
+    }
 
-
+    .lunch-menu {
+      display: flex;
+      flex-wrap: wrap;
     }
 
   .unicard {
     box-shadow: 0 10px 14px -7px #5b5b5f;
-    width: 262.99px;
+    width: 257.99px;
     height: 320.2px;
     margin: 10px 7px 30px 10px;
     border-radius: 20px;
-
-
+    justify-content: center;
+    /* background-color: #d7d7d7; */
+    background-color: #ffb437;
 
   }
 
   .add-button{
     width: 132.82px;
     height: 37.39px;
-    background-color: rgba(254, 120, 0, 1);
+    background-color: #D22704;;
     color: white;
     font-family: 'Poppins', sans-serif;
     width: 99.82px;
     border-style: unset;
     border-radius: 20px;
-    margin: -10px 0px 0px 77px;
-
-
+    margin: -2px 0px 0px 77px;
+    box-shadow: 0 10px 14px -7px #5b5b5f;
   }
 
   .product-name{
     font-family: 'Berkshire Swash', cursive;
-    font-size: 27px;
-    margin: 15px 36px;
+    font-size: 25px;
+    margin: 0px 0px 0px 20px;
+
 
   }
 
@@ -163,7 +167,8 @@
     transition-duration: 0.7s;
     cursor: pointer;
     border: 2px solid rgba(254, 120, 0, 1) ;
-    margin: 15px 2px 4px 24px;
+    margin: 4px 2px 4px 24px;
+
 
 
   }
@@ -195,24 +200,42 @@
 
   .product-price{
     width: 100px;
-    height: 30px;
+    height: 26px;
     background-color:  white;
     color: black; 
     border-style: unset;
     box-shadow: 0 10px 14px -7px #5b5b5f;
     font-family: 'Poppins', sans-serif;
     border-radius: 20px;
-    margin: 2px 17px 15px 78px;
-
+    margin: 6px 17px 15px 78px;
 
   }
 
   .product-image{
-    width: 150px;
+    width: 122px;
     height: 100px;
-    border-radius: 20px;
+    border-radius: 83px;
+    margin: 10px 0px 0px 67px;
+
+
   }
 
- .inputsContainer{
-  background-color:rgba(203, 203, 203, 0.42);
+ .orders-container{
+  /* background-color:rgba(203, 203, 203, 0.11); */
+
+ background-color:  white;
+  
  }
+
+ .form-select {
+  margin: -27px 0px 0px 73px;
+  width: 203px;
+  height: 37px;
+  background-color: white;
+  color: black;
+  border-style: unset;
+  box-shadow: 0 10px 14px -7px #5b5b5f;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 20px;
+  margin: -43px 17px 15px 34px;
+}

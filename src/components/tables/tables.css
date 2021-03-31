@@ -3,6 +3,7 @@
     height: 100vw;
     display: flex;
     flex-direction: column;
+    background-color:  rgba(203, 203, 203, 0.11);
 }
 
 .text-tables{

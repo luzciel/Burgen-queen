@@ -4,7 +4,6 @@ import MenuButtons from './MenuButtons';
 // import NumberTables from '../tables/NumberTable'
 
 const OrdersInputs = (props) =>{
-    // console.log("hola", props)
     return (
         <Fragment>
             <input type="text" className="clientName" placeholder="Nombre Cliente"/>
