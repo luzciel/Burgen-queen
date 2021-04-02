@@ -46,25 +46,35 @@ const LunchMenu = () => {
     setCart([...cart, product])//... spread operator  o spread syntax trae las propiedades del objeto
     }
 
-    // Funcion que agrega la colleccion a firebase
-  const addCollectionOrders = async (order) => {
-    await db.collection('Orders').add({
-        dateOrder: new Date(),
-        product: order,
-        status: "En espera",
-      })
-      .then(function (docRef) {
-        console.log("NEW COLECTION")
-      })
-      .catch(function (error) {
-        console.error("Error adding document: ", error);
-      });
-  };
+  //   // Funcion que agrega la colleccion a firebase
+  // const addCollectionOrders = async (order) => {
+  //   await db.collection('Orders').add({
+  //       dateOrder: new Date(),
+  //       product: order,
+  //       status: "En espera",
+  //     })
+  //     .then(function (docRef) {
+  //       console.log("NEW COLECTION")
+  //     })
+  //     .catch(function (error) {
+  //       console.error("Error adding document: ", error);
+  //     });
+  // };
   
+ // Funcion que agrega la colleccion a firebase
+  const addCollectionOrders = async (order) => {
+    try {
+      const docRef = await db.collection('Orders').add({
+          dateOrder: new Date(),
+          status: "En espera",
+          product: order,
+        })
+      console.log("NEW COLECTION")
+    } catch (error) {
+      console.error("Error adding document: ", error);
+    }
 
-//     const addCollectionOrders = () => {
-//     console.log("NEW COLECTION")
-//   }
+  };
 
     return (
       <div className="container menus">
@@ -111,12 +121,7 @@ const LunchMenu = () => {
                 }
               })()}
   
-  
-              <button
-                type="button"
-                className="add-button"
-                onClick={() => addProduct(item.id)}
-              >
+              <button type="button" className="add-button" onClick={() => addProduct(item.id)}>
                 + Añadir
               </button>
             </div>
