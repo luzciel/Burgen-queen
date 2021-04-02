@@ -17,38 +17,35 @@ const LunchMenu = () => {
         const data = await fetch('https://luzciel.github.io/Burgen-queen/src/data/menu.json')
         const fullMenu = await data.json()
         setMenu(fullMenu.almuerzo)
-        console.log(fullMenu.almuerzo)
     }
 
     
     const [cart, setCart] = React.useState([])
-    
+
+    //aqui le decimos que esté atento a cada actualizacion...
     React.useEffect(() => {
-        console.log(666666666666666666) 
     }, [cart])
 
 
 
     //Funcion que agrega el producto a la Orden     
     const addProduct = id => {
-        const item = menuAlmuerzo.filter((item) => item.id === id);
+        const items = menuAlmuerzo.filter((item) => item.id === id); //items es el nuevo array que se obtuvo del filter
         const product= {}
-        const listCars = item.map((item) => {
-        product.id = uuidv4();
+        const listCars = items.map((item) => {
+        product.id = uuidv4();  //da un id unico
         product.producto = item.producto;
-        product.opcion ='';  //aqui deberia ir la opcion pollo, carne, veg
+        product.opcion =''; //item.opciones //aqui deberia ir la opcion pollo, carne, veg
         product.precio = item.precio;
         product.cantidad = 1;
         product.extraHuevo = false; // true o false
         product.extraQueso = false; // true o false
     })
 
-    setCart([...cart, product])//... spread operator  o spread syntax trae las propiedades del objeto
-        console.log(cart, 5555)
+    setCart([...cart, product])//... spread operator  o spread syntax trae las propiedades del objeto -  aqui le estoy diciendo que meta product en el carrito "cart"
     }
 
 
-    console.log(cart, 77777777777777777777777)
 
     return (
       <div className="container menus">
@@ -69,8 +66,8 @@ const LunchMenu = () => {
                       class="form-select"
                       aria-label="Default select example">
                       {item.opciones.map((x) => (
-                        <option value={x.id} key={x.id}>
-                          {x.opcion} ${x.precio}
+                        <option value={x.opcion} key={x.id} >
+                          {x.opcion}  $ {x.precio}
                         </option>
                       ))}
                     </select>

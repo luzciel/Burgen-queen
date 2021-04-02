@@ -7,7 +7,7 @@ import circlePlus from '../../img/circlePlus.svg';
 
 
 
-const LunchView = ({ itemIndex, item, cart, setCart, sendSubTotal }) => {
+const LunchView = ({item, cart, setCart}) => {
 
   const { producto, precio, id, cantidad } = item;
 
@@ -17,7 +17,7 @@ const LunchView = ({ itemIndex, item, cart, setCart, sendSubTotal }) => {
 
   //Funcion para Eliminar una producto de la Orden
   const deleteProduct = () => {
-    const orderedProduct = cart.filter(item => item.id !== id);
+    const orderedProduct = cart.filter(item => item.id !== id); //devuelve todo  con exepcion del id que estoy clickeando
     setCart(orderedProduct);
   }
    

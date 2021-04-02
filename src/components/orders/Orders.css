@@ -229,7 +229,7 @@
 
  .form-select {
   margin: -27px 0px 0px 73px;
-  width: 203px;
+  width: 155px;
   height: 37px;
   background-color: white;
   color: black;
@@ -237,5 +237,5 @@
   box-shadow: 0 10px 14px -7px #5b5b5f;
   font-family: 'Poppins', sans-serif;
   border-radius: 20px;
-  margin: -43px 17px 15px 34px;
+  margin: -43px 17px 15px 53px;
 }

@@ -8,7 +8,6 @@ import './OrderDetail.css'
 const OrderDetail = ({ cart, setCart }) => {
 
   //Sumar el total de los items. Recorre el carrito y crea un nuevo array con los precios (NUMBER)
-  console.log('ordenDeatil', cart)
   const productPrices = cart.map((item) => Math.floor(item.precio) * item.cantidad); 
 
   // reduce, toma todos los elementos en un array, y los reduce en un solo valor.
