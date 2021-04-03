@@ -2,6 +2,7 @@ import React from "react";
 import OrderDetail from "./OrderDetail";
 import "./Orders.css";
 
+//accediendo a la data del menu...
 const BreakfastMenu = (props) => {
   const [menu, setMenu] = React.useState([]);
 
@@ -25,13 +26,14 @@ const BreakfastMenu = (props) => {
     const item = menu.filter((item) => item.id === id);
     setCart([...cart, ...item]);
   };
+  
 
-  //subcategorias  ****
-  const subcategories = function (e) {
-    const option = e.target.value;
-    console.log(option);
-    setMenu(option);
-  };
+  // //subcategorias  ****
+  // const subcategories = function (e) {
+  //   const option = e.target.value;
+  //   console.log(option);
+  //   setMenu(option);
+  // };
 
   return (
     <div className="container menus">
@@ -44,7 +46,7 @@ const BreakfastMenu = (props) => {
               ${item.precio}
             </button>
 
-            {/* si item tiene opciones, recorre "opciones" y muestrame un select con las opciones */}
+            {/* SELECT CON OPCIONES - si item tiene opciones, recorre "opciones" y muestrame un select con las opciones */}
             {(() => {
                 if (item.opciones) {
                   return (
@@ -54,10 +56,11 @@ const BreakfastMenu = (props) => {
                     >
                       
                       {item.opciones.map((x) => (
-                        <option value={x.id} key={x.id}>
-                          {x.opcion}
+                        <option value={x.id} key={x.id} >
+                          {x.opcion}  $ {x.precio}
                         </option>
                       ))}
+                      
                     </select>
                   );
                 }
@@ -67,8 +70,7 @@ const BreakfastMenu = (props) => {
             <button
               type="button"
               className="add-button"
-              onClick={() => addProduct(item.id)}
-            >
+              onClick={() => addProduct(item.id)}>
               + Añadir
             </button>
           </div>

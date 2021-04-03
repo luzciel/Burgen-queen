@@ -26,14 +26,14 @@ border: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 .navbar-expand-lg {
-  background-color: rgba(203, 203, 203, 0.11); 
+  background-color: #fcfcfc; 
   box-shadow: 0 10px 14px -7px #5b5b5f;
   height: 57px;
 }
 
 .navbar-expand-lg .navbar-collapse {
-    display: flex!important;
-    justify-content: flex-end;
+    /* display: flex!important; */
+    /* justify-content: flex-end; */
     font-family: 'Berkshire Swash', cursive;
 }
 
