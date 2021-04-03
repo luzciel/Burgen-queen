@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import LunchMenu from './LunchMenu';
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import delete24Regular from '@iconify/icons-fluent/delete-24-regular';
 import less from '../../img/less.svg';
 import circlePlus from '../../img/circlePlus.svg';
@@ -9,8 +9,8 @@ import circlePlus from '../../img/circlePlus.svg';
 
 const LunchView = ({item, cart, setCart}) => {
 
-  const { producto, precio, id, cantidad } = item;
-
+  const { producto, precio, id, cantidad,opcion, adicional} = item;
+  console.log(adicional)
   const iconDelete = <Icon icon={delete24Regular} style={{ color: '#ff0b0b', fontSize: '25px' }} />;
   const iconCirclePlus =  <img src={circlePlus} alt='iconCirclePlus' className='quantity-icon'></img>;
   const iconLess = <img src={less} alt='iconLess' className='quantity-icon'></img>;
@@ -55,12 +55,25 @@ const LunchView = ({item, cart, setCart}) => {
     <tbody className=''>
       <tr>
         <th scope="row"><span onClick={() => deleteProduct()}>{iconDelete}</span></th>
-        <td className='name-product' colSpan="2">{producto}</td>
+        <td className='name-product' colSpan="2">
+          {producto + " " + opcion}
+
+          {
+            adicional.map ((value,index) => (
+             <div key={index} >
+              {value.adicional}
+             </div>
+            ))
+          }
+          
+          
+        </td>
+        
         <td className='div-quantity'>
             <span><span onClick={incrementQuatity}>{iconCirclePlus}</span>
             <span className="quantity-number">{cantidad}</span>
             <span onClick={descrementQuatity}>{iconLess}</span></span>
-          <p>SubTotal = {productSubTotal}</p>
+          {/* <p>SubTotal = {productSubTotal}</p> */}
         </td>
       </tr>
     </tbody>

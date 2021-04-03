@@ -4,14 +4,6 @@ import BreakfastMenu from './BreakfastMenu'
 
 const MenuButtons = (props) =>{
 
-    const BreakfastData = () =>{
-        console.log('soy el boton data DESAYUNO')
-    }
-    
-    const lunchData = () =>{
-        console.log('soy el boton  data ALMUERZO')
-    }
-
     return (
     
         <div>

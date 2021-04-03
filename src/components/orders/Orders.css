@@ -43,7 +43,7 @@
     background-color: #F6F1F1;
     padding: 15px;
     height: 38px;
-    width: 87px;
+    width: 97px;;
     outline: none;
 
 }
@@ -173,10 +173,12 @@
 
   }
    
-  .additional-button-egg:hover {
+  .additional-button-egg-active{
     background-color:rgba(254, 120, 0, 0.46);
     color: black;
   }
+  
+  
 
 .additional-button-cheese{
     width: 100px;
