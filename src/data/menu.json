@@ -62,7 +62,7 @@
                 {
                     "id": 53,
                     "precio": "1500",
-                    "opcion": "Vegetariana"
+                    "opcion": "Vegana"
                 }
             ],
             "extra": [
@@ -96,7 +96,7 @@
                 {
                     "id": 63,
                     "precio": "3000",
-                    "opcion": "Vegetariana"
+                    "opcion": "Vegana"
                 }  
             ],
             "precio": "3000",

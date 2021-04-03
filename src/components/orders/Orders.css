@@ -173,10 +173,12 @@
 
   }
    
-  .additional-button-egg:hover {
+  .additional-button-egg-active{
     background-color:rgba(254, 120, 0, 0.46);
     color: black;
   }
+  
+  
 
 .additional-button-cheese{
     width: 100px;
@@ -229,7 +231,7 @@
 
  .form-select {
   margin: -27px 0px 0px 73px;
-  width: 203px;
+  width: 155px;
   height: 37px;
   background-color: white;
   color: black;
@@ -237,5 +239,5 @@
   box-shadow: 0 10px 14px -7px #5b5b5f;
   font-family: 'Poppins', sans-serif;
   border-radius: 20px;
-  margin: -43px 17px 15px 34px;
+  margin: -43px 17px 15px 53px;
 }
