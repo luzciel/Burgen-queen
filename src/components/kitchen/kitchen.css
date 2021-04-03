@@ -1,0 +1,13 @@
+.kitchen-body{
+    width: 100vw;
+    margin-top: 8%;
+    margin-left: 0;
+}
+
+.kitchen{
+    background: #FFFFFF;
+    border: 1px solid #CBCBCB;
+    box-sizing: border-box;
+    border-radius: 30px;
+    margin-left: 3%;
+}
