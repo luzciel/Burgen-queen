@@ -49,23 +49,20 @@ const BreakfastMenu = (props) => {
             {/* SELECT CON OPCIONES - si item tiene opciones, recorre "opciones" y muestrame un select con las opciones */}
             {(() => {
                 if (item.opciones) {
+                  item.opcion = item.opciones[0].opcion; 
                   return (
                     <select
                       class="form-select"
-                      aria-label="Default select example"
-                    >
-                      
+                      aria-label="Default select example" onChange={(e) => item.opcion = e.target.value} >
                       {item.opciones.map((x) => (
-                        <option value={x.id} key={x.id} >
+                        <option value={x.opcion} key={x.id} >
                           {x.opcion}  $ {x.precio}
                         </option>
                       ))}
-                      
                     </select>
                   );
                 }
               })()}
-
             {/* boton añadir a la orden */}
             <button
               type="button"
