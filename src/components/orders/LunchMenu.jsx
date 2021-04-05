@@ -83,9 +83,11 @@ const LunchMenu = () => {
   
  // Funcion que agrega la colleccion a firebase
   const addCollectionOrders = async (order) => {
+    const date = new Date();
+    const fecha = `${(`00${date.getDate()}`).slice(-2)}/${(`00${date.getMonth() + 1}`).slice(-2)}/${date.getFullYear()} ${(`00${date.getHours()}`).slice(-2)}:${(`00${date.getMinutes()}`).slice(-2)}:${(`00${date.getSeconds()}`).slice(-2)}`;
     try {
       const docRef = await db.collection('Orders').add({
-          dateOrder: new Date(),
+          dateOrder: fecha,
           status: "En espera",
           product: order,
         })
