@@ -231,8 +231,8 @@
  }
 
  .form-select {
-  width: 16vw;
-  height: 5vh;
+  width: 8vw;
+  height: 4vh;
   background-color: white;
   color: black;
   border-style: unset;
@@ -240,4 +240,14 @@
   font-family: 'Poppins', sans-serif;
   border-radius: 20px;
   margin: -42px 17px 15px 48px;
+}
+
+
+/* formato responsive para table */  
+@media screen and (min-width: 415px)  and (max-width: 1024px){
+  .form-select {
+    width: 16vw;
+    height: 5vh;
+  }
+
 }

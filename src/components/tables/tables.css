@@ -53,3 +53,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
+/* formato responsive para table */  
+@media screen and (min-width: 415px)  and (max-width: 1024px){
+    .to-go {
+     width: 16vw;
+     height: 7vh;
+    }
+  
+  }
