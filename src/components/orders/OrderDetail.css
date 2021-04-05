@@ -69,6 +69,11 @@
     width: 160px;
 }
 
+.container-btn{
+    margin-bottom: 3%;
+    display: flex;
+    justify-content: center;
+}
 .btn-cancel{
     background: #D22704;
 }
