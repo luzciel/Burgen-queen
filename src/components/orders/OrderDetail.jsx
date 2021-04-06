@@ -7,7 +7,14 @@ import './OrderDetail.css';
 const OrderDetail = ({ cart, setCart, addCollectionOrders}) => {
 
   //Sumar el total de los items. Recorre el carrito y crea un nuevo array con los precios (NUMBER)
-  const productPrices = cart.map((item) => Math.floor(item.precio) * item.cantidad); 
+  const productPrices = cart.map((item) => {
+    if (item.adicional) {
+      return (Math.floor(item.precio) + (item.adicional.length * 300)) * item.cantidad; 
+      
+    } else{
+        return Math.floor(item.precio) * item.cantidad;
+      }
+    })
 
   // reduce, toma todos los elementos en un array, y los reduce en un solo valor.
   const grandTotal = productPrices.reduce((a, b) => a + b, 0); 
@@ -21,14 +28,10 @@ const OrderDetail = ({ cart, setCart, addCollectionOrders}) => {
     }
   }
 
-    // // Funcion que agrega la colleccion a firebase
-  // const addCollectionOrders = async (product) => {
-  //   await db.collection('orders').doc().set(product)
-  //   console.log("NEW COLECTION")
-  // }
+  //Esta funcion se va activar al darle click al boton enviar
   const handleSendOrder = () => {
-    console.log("enviar a firebase")
     addCollectionOrders(cart)
+    console.log("enviar a firebase")
 
   }
 
@@ -45,7 +48,7 @@ const OrderDetail = ({ cart, setCart, addCollectionOrders}) => {
       <h1 className="total">${grandTotal}</h1>
       </div>
       <div className="div-btn">
-        <button type="button" class="btn btn-lg btn-send"  onClick={() => handleSendOrder()}>Enviar</button>
+        <button type="button" class="btn btn-lg btn-send" onClick={() => handleSendOrder()}>Enviar</button>
         <a href='/'><button type="button" class="btn btn-lg btn-cancel">Cancelar</button></a>
       </div>
     </div>

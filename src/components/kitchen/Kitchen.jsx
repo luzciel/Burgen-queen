@@ -21,6 +21,7 @@ const Kitchen = () => {
         }
     };
 
+    // Se mantiene atento de las actualizaciones 
     useEffect(() => {
         getOrders();
     }, []);
@@ -36,7 +37,7 @@ const Kitchen = () => {
                             .slice(-2)}`;
         try {
             const docRef = await db.collection('readyOrders').add({
-                dateEnd: fecha,
+                dateEnd: fecha, //Hora de salida de cocina
                 orderCompleted: order,
             })
         } catch (error) {
@@ -52,7 +53,7 @@ const Kitchen = () => {
         } catch (error) {
             console.error('Error deleting document:', error)
         }
-        readyOrders(order);
+        readyOrders(order); // LLama a readyOrders el cual Agrega coleccion readyOrders a firebase
     }
 
 

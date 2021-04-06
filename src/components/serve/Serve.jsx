@@ -1,8 +1,8 @@
-import React, {useEffect, useState, Fragment} from 'react';
-import {db} from '../../firebase.js';
+import React, { useEffect, useState, Fragment } from 'react';
+import { db } from '../../firebase.js';
 
 const Serve = () => {
-    const [ serveOrder, setServeOrder] = useState([]);
+    const [serveOrder, setServeOrder] = useState([]);
 
     // Recupera la coleccion Orders de firebase
     const getReadyOrders = async () => {
@@ -10,7 +10,7 @@ const Serve = () => {
             await db.collection("readyOrders").onSnapshot((querySnapshot) => {
                 const orders = []
                 querySnapshot.forEach((doc) => {
-                    orders.push({...doc.data(), id:doc.id});
+                    orders.push({ ...doc.data(), id: doc.id });
                 });
                 setServeOrder(orders); // actualiza orders agregando el id del Documento de firebase
             });
@@ -27,28 +27,6 @@ const Serve = () => {
 
     return (
         <Fragment>
-
-        {/* <div>
-            <div className="col-md-8">
-                {serveOrder.map(order =>(
-                    <div className="car mb-1" key={order.id}>
-                     <h1>{order.id}</h1> 
-                     <div>{order.orderCompleted.product.map(item => (
-                          <div className="" key={item.id}>
-                          <p>{item.producto}</p>
-                          <p>{item.cantidad}</p>
-                          <p>{item.extra}</p>
-                          <p>{item.extra}</p>
-                          <p>{item.opcion}</p>
-                          <hr/>
-                          </div>
-                     ))}</div> 
-                     <button id="OrderList">Orden Lista</button>
-                     </div>
-                     ))}                
-            </div>
-        </div> */}
-            <Fragment>
             <div className="orders-body">
                 <h1>Entregar pedido:</h1>
                 <div className="container-orders">
@@ -67,24 +45,24 @@ const Serve = () => {
                             </div>
                             <div className="container-product">{order.orderCompleted.product.map(item => (
                                 <div className="container-product-item">
-                                <div class="container" key={item.id}>
-                                    <div class="row">
+                                    <div class="container" key={item.id}>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p><strong>{item.producto}</strong></p>
+                                                <p className="product-opcion">{item.opcion}</p>
+                                                {
+                                                    item.adicional.map((value, index) => (
+                                                        <div className="product-opcion" key={index} >
+                                                            {value.adicional}
+                                                        </div>
+                                                    ))}
+                                            </div>
+                                        </div>
                                         <div class="col">
-                                        <p><strong>{item.producto}</strong></p>
-                                        <p className="product-opcion">{item.opcion}</p>
-                                        {
-                                            item.adicional.map((value, index) => (
-                                                <div className="product-opcion" key={index} >
-                                                    {value.adicional}
-                                                </div>
-                                            ))}
+                                            <p className="price">{item.cantidad}</p>
                                         </div>
                                     </div>
-                                    <div class="col">
-                                    <p className="price">{item.cantidad}</p>
-                                    </div>
-                                </div>
-                                <hr />
+                                    <hr />
                                 </div>
                             ))}
                             </div>
@@ -95,7 +73,6 @@ const Serve = () => {
                     ))}
                 </div>
             </div>
-        </Fragment>
         </Fragment>
     )
 }

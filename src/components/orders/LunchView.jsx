@@ -10,7 +10,6 @@ import circlePlus from '../../img/circlePlus.svg';
 const LunchView = ({item, cart, setCart}) => {
 
   const { producto, precio, id, cantidad,opcion, adicional} = item;
-  console.log(adicional)
   const iconDelete = <Icon icon={delete24Regular} style={{ color: '#ff0b0b', fontSize: '25px' }} />;
   const iconCirclePlus =  <img src={circlePlus} alt='iconCirclePlus' className='quantity-icon'></img>;
   const iconLess = <img src={less} alt='iconLess' className='quantity-icon'></img>;
