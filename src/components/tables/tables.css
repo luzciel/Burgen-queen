@@ -42,8 +42,8 @@
 }
 
 .to-go{
-    width: 8vw;
-    height: 5vh;
+    width: 167px;
+    height: 51px;
     margin: 7px 0px 0px 77px;
     box-shadow: 0 10px 14px -7px #5b5b5f;
     border-style: unset;
@@ -53,12 +53,21 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.btn-primary:hover {
+    color: #fff;
+    background-color:  #D22704;
+    border-color: #D22704;
+}
+
 
 /* formato responsive para table */  
 @media screen and (min-width: 415px)  and (max-width: 1024px){
     .to-go {
-     width: 16vw;
-     height: 7vh;
+     
+    }
+
+    .textH1 {
+        margin: 0px 0px 0px 169px;
     }
   
   }

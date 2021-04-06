@@ -2,7 +2,6 @@ import React from 'react'
 import OrderDetail from './OrderDetail';
 import "./Orders.css";
 import LunchView from './LunchView';
-import { db } from '../../firebase.js';
 import { v4 as uuidv4 } from 'uuid';
 
 //componente extras
@@ -27,7 +26,7 @@ const AdditionalButton =({adicional,precio, item }) =>{
   );
 } 
 
-const LunchMenu = () => {
+const LunchMenu = ({addCollectionFunction}) => {
  
     const [menuAlmuerzo, setMenu] = React.useState([]);
     
@@ -48,7 +47,7 @@ const LunchMenu = () => {
     React.useEffect(() => {
     }, [cart])
 
-
+ 
 
     //Funcion que agrega el producto a la Orden     
     const addProduct = id => {
@@ -57,10 +56,11 @@ const LunchMenu = () => {
         const listCars = items.map((item) => {
         product.id = uuidv4();  //da un id unico
         product.producto = item.producto;
-        product.opcion = item.opcion; //item.opciones //aqui deberia ir la opcion pollo, carne, veg
+        product.opcion = item.opcion ? item.opcion : "" ;  //aqui deberia ir la opcion pollo, carne, veg
+        
         product.precio = item.precio;
         product.cantidad = 1;
-        product.adicional = item.adicional; 
+        product.adicional = item.adicional ? item.adicional : [] ; 
     })
 
     setCart([...cart, product])//... spread operator  o spread syntax trae las propiedades del objeto
@@ -81,22 +81,7 @@ const LunchMenu = () => {
   //     });
   // };
   
- // Funcion que agrega la colleccion a firebase
-  const addCollectionOrders = async (order) => {
-    const date = new Date();
-    const fecha = `${(`00${date.getDate()}`).slice(-2)}/${(`00${date.getMonth() + 1}`).slice(-2)}/${date.getFullYear()} ${(`00${date.getHours()}`).slice(-2)}:${(`00${date.getMinutes()}`).slice(-2)}:${(`00${date.getSeconds()}`).slice(-2)}`;
-    try {
-      const docRef = await db.collection('Orders').add({
-          dateOrder: fecha,
-          status: "En espera",
-          product: order,
-        })
-      console.log("NEW COLECTION")
-    } catch (error) {
-      console.error("Error adding document: ", error);
-    }
-
-  };
+ 
 
     return (
       <div className="container menus">
@@ -147,6 +132,8 @@ const LunchMenu = () => {
               })()}
   
               <button type="button" className="add-button" onClick={() => addProduct(item.id)}>
+
+            
                 + Añadir
               </button>
             </div>
@@ -156,7 +143,7 @@ const LunchMenu = () => {
                 <OrderDetail
                     cart={cart}
                     setCart={setCart}
-                    addCollectionOrders={addCollectionOrders}/>
+                    addCollectionOrders={addCollectionFunction}/>
             </div>
 
 

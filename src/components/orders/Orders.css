@@ -10,7 +10,7 @@
 }*/
 
 .clientName{
-    margin: 82px -97px 0px 43px;
+    margin: 89px -97px 21px 603px;
     font-family: 'Poppins', sans-serif;
     border-radius: 5px;
     border: 3px solid #FE7800;
@@ -19,11 +19,10 @@
     height: 38px;
     padding: 15px;
     outline: none;
-
 }
 
 .waiterName{
-    margin: 82px 0px 0px 108px;
+    margin: 89px 103px 0px 191px;
     font-family: 'Poppins', sans-serif;
     border-radius: 5px;
     border: 3px solid #FE7800;
@@ -49,9 +48,9 @@
 }
 
 .hrOrders{
-    width: 1375px;
-    justify-content: center;
-    margin: 9px -106px 10px;
+  width: 98vw;
+  justify-content: center;
+  margin: 9px -153px 4px;
 
 
 }
@@ -59,7 +58,7 @@
 .btnBreakfast{
     width: 165.53px;
     height: 68.44px;
-    margin: 49px 21px 10px 127px;
+    margin: 49px 21px 10px 525px;
     box-shadow: 0 29px 39px -5px rgb(91 91 95 / 47%);
     border-radius: 20px;
     font-family: 'Poppins', sans-serif;
@@ -69,14 +68,15 @@
     transition-duration: 0.7s;
     cursor: pointer;
     border: 2px solid #D22704;
-    background-color: white; 
-    color: black;
+    background-color:#D22704;
+    color: white;
+    
 }
 
 .btnBreakfast:hover {
-    background-color:#D22704;
-    color: white;
-     
+    
+    background-color: white; 
+    color: black;
   }
 
 .btnLunch{
@@ -92,13 +92,15 @@
     transition-duration: 0.7s;
     cursor: pointer;
     border: 2px solid #D22704;
-    background-color: white; 
-    color: black; 
+    background-color:#D22704;
+    color: white;
+    
 }
 
 .btnLunch:hover {
-    background-color:#D22704;
-    color: white;
+    
+    background-color: white; 
+    color: black; 
   }
 
 
@@ -231,8 +233,8 @@
  }
 
  .form-select {
-  width: 8vw;
-  height: 4vh;
+  width: 169px;
+  height: 35px;
   background-color: white;
   color: black;
   border-style: unset;
@@ -245,9 +247,25 @@
 
 /* formato responsive para table */  
 @media screen and (min-width: 415px)  and (max-width: 1024px){
-  .form-select {
-    width: 16vw;
-    height: 5vh;
+  .btnBreakfast{
+    margin: 49px 21px 10px 116px;
   }
+
+  .clientName {
+    margin: 89px -97px 11px 60px;
+  }
+
+  .breakfast-cart{
+    width: 36vw;
+  }
+
+  .btn-cancel {
+    margin: 12px 12px 8px -22px;
+   }
+
+   .btn-send {
+    margin: 12px -20px 8px 13px;
+    width: 159px;
+    }
 
 }
