@@ -4,6 +4,7 @@ import MenuButtons from '../components/orders/MenuButtons'
 import BreakfastMenu from '../components/orders/BreakfastMenu'
 import OrdersInputs from '../components/orders/OrdersInputs'
 import LunchMenu from '../components/orders/LunchMenu'
+import { db } from '../firebase.js';
 import OrderDetail from '../components/orders/OrderDetail'
 import LunchView from '../components/orders/LunchView';
 // import { db } from '../../firebase'
@@ -11,6 +12,11 @@ import LunchView from '../components/orders/LunchView';
 
 
 const OrdersViews = (props) => {
+
+  const [clientNameState, setClientNameState ] = React.useState("")
+  const [waiterNameState, setWaiterName] = React.useState("")
+
+
 
   const [btnDesayuno, setBtnDesayuno] = React.useState('Desayuno'); // estado del boton desayuno 
 
@@ -29,25 +35,52 @@ const OrdersViews = (props) => {
     setShowLunch(true)
   }
 
-  // // Funcion que agrega la colleccion a firebase
-  // const addCollectionOrders = async (product) => {
-  //   await db.collection('orders').doc().set(product)
-  //   console.log("NEW COLECTION")
-  // }
+    // Funcion que agrega la colleccion a firebase
+    const addCollectionOrders = async (order) => {
+      console.log(order);
+      const date = new Date();
+      const fecha = `${(`00${date.getDate()}`).slice(-2)}/${(`00${date.getMonth() + 1}`).slice(-2)}/${date.getFullYear()} ${(`00${date.getHours()}`).slice(-2)}:${(`00${date.getMinutes()}`).slice(-2)}:${(`00${date.getSeconds()}`).slice(-2)}`;
+      try {
+        const docRef = await db.collection('Orders').add({
+            dateOrder: fecha,
+            status: "En espera",
+            product: order,
+            clientName: clientNameState,
+            waiterName: waiterNameState,
+            tableNumber: props.match.params.numTable,
+          })
+
+          const send = window.confirm("Enviar pedido a cocina");
+          if (send) {
+            window.location.href='/';
+          }
+          
+        // alert("Pedido enviado a cocina")
+        // window.location.href='/';
+      } catch (error) {
+        console.error("Error adding document: ", error);
+      }
+
+    };
   
   return (
     <div className="orders-container">
-        <OrdersInputs/>
+        <OrdersInputs 
+          clientName={clientNameState} 
+          setClientName={setClientNameState}
+          waiterName={waiterNameState} 
+          setWaiterName={setWaiterName}/>
+
         <input type="text" className="tableNumber" placeholder="Mesa" value={`Mesa ${props.match.params.numTable}`} />
         <hr className="hrOrders"></hr>
 
         <MenuButtons  //propiedades del componente hijo (MenuButtons)
-         btnDesayuno={btnDesayuno}     
-         breakfastClick ={()=>{toggleBreakfast()}}  
-         lunchClick={()=>{toggleLunch()}}
+          btnDesayuno={btnDesayuno}     
+          breakfastClick ={()=>{toggleBreakfast()}}  
+          lunchClick={()=>{toggleLunch()}}
          /> 
 
-        {showBreakfast ? <BreakfastMenu addCollectionOrders/> : <LunchMenu/> } {/* si showBreakfast es true se muestre el menu del desayuno y sino se muestre el menu del almuerzo  */}
+        {showBreakfast ? <BreakfastMenu /> : <LunchMenu addCollectionFunction={addCollectionOrders}/> } {/* si showBreakfast es true se muestre el menu del desayuno y sino se muestre el menu del almuerzo  */}
 
     
     </div>

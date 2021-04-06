@@ -26,13 +26,13 @@ const AdditionalButton = ({ adicional, precio, item }) => {
   );
 }
 
-const LunchMenu = () => {
-
-  const [menuAlmuerzo, setMenu] = React.useState([]);
-
-  React.useEffect(() => {
-    getData()
-  }, [])
+const LunchMenu = ({addCollectionFunction}) => {
+ 
+    const [menuAlmuerzo, setMenu] = React.useState([]);
+    
+    React.useEffect(() => {
+        getData()
+    }, [])
 
   const getData = async () => {
     const data = await fetch('https://luzciel.github.io/Burgen-queen/src/data/menu.json')
@@ -43,49 +43,46 @@ const LunchMenu = () => {
 
   const [cart, setCart] = React.useState([])
 
-  //aqui le decimos que esté atento a cada actualizacion...
-  React.useEffect(() => {
-  }, [cart])
+ 
 
-
-
-  //Funcion que agrega el producto a la Orden     
-  const addProduct = id => {
-    const items = menuAlmuerzo.filter((item) => item.id === id); //items es el nuevo array que se obtuvo del filter
-    const product = {}
-    const listCars = items.map((item) => {
-      product.id = uuidv4();  //da un id unico
-      product.producto = item.producto;
-      product.opcion = item.opcion; //item.opciones //aqui deberia ir la opcion pollo, carne, veg
-      product.precio = item.precio;
-      product.cantidad = 1;
-      product.adicional = item.adicional;
+    //Funcion que agrega el producto a la Orden     
+    const addProduct = id => {
+        const items = menuAlmuerzo.filter((item) => item.id === id); //items es el nuevo array que se obtuvo del filter
+        const product= {}
+        const listCars = items.map((item) => {
+        product.id = uuidv4();  //da un id unico
+        product.producto = item.producto;
+        product.opcion = item.opcion ? item.opcion : "" ;  //aqui deberia ir la opcion pollo, carne, veg
+        
+        product.precio = item.precio;
+        product.cantidad = 1;
+        product.adicional = item.adicional ? item.adicional : [] ; 
     })
 
     setCart([...cart, product])//... spread operator  o spread syntax trae las propiedades del objeto
   }
 
-  // Funcion que agrega la colleccion a firebase
-  const addCollectionOrders = async (order) => {
-    const date = new Date();
-    const fecha = `${(`00${date.getDate()}`)
-      .slice(-2)}/${(`00${date.getMonth() + 1}`)
-        .slice(-2)}/${date.getFullYear()} ${(`00${date.getHours()}`)
-          .slice(-2)}:${(`00${date.getMinutes()}`)
-            .slice(-2)}:${(`00${date.getSeconds()}`)
-              .slice(-2)}`;
-    try {
-      const docRef = await db.collection('Orders').add({
-        dateOrder: fecha,
-        status: "En espera",
-        product: order,
-      })
-      console.log("NEW COLECTION")
-    } catch (error) {
-      console.error("Error adding document: ", error);
-    }
+  // // Funcion que agrega la colleccion a firebase
+  // const addCollectionOrders = async (order) => {
+  //   const date = new Date();
+  //   const fecha = `${(`00${date.getDate()}`)
+  //     .slice(-2)}/${(`00${date.getMonth() + 1}`)
+  //       .slice(-2)}/${date.getFullYear()} ${(`00${date.getHours()}`)
+  //         .slice(-2)}:${(`00${date.getMinutes()}`)
+  //           .slice(-2)}:${(`00${date.getSeconds()}`)
+  //             .slice(-2)}`;
+  //   try {
+  //     const docRef = await db.collection('Orders').add({
+  //       dateOrder: fecha,
+  //       status: "En espera",
+  //       product: order,
+  //     })
+  //     console.log("NEW COLECTION")
+  //   } catch (error) {
+  //     console.error("Error adding document: ", error);
+  //   }
 
-  };
+  // };
 
   return (
     <div className="container menus">
@@ -128,25 +125,27 @@ const LunchMenu = () => {
                         adicional={x.adicional}
                         precio={x.precio}
                         item={item} />     //le estoy pasando la hamburguesa que se esta pintando en el menu
-                    ))}
-                  </div>
+                      ))}
+                      </div>
+                    
+                  );
+                }
+              })()}
+  
+              <button type="button" className="add-button" onClick={() => addProduct(item.id)}>
 
-                );
-              }
-            })()}
-
-            <button type="button" className="add-button" onClick={() => addProduct(item.id)}>
-              + Añadir
+            
+                + Añadir
               </button>
-          </div>
-        ))}
-      </div>
-      <div className='breakfast-cart'>
-        <OrderDetail
-          cart={cart}
-          setCart={setCart}
-          addCollectionOrders={addCollectionOrders} />
-      </div>
+            </div>
+          ))}
+        </div>
+            <div className='breakfast-cart'>
+                <OrderDetail
+                    cart={cart}
+                    setCart={setCart}
+                    addCollectionOrders={addCollectionFunction}/>
+            </div>
 
 
     </div>

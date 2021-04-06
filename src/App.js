@@ -18,6 +18,7 @@ import HomeViews from './views/HomeViews';
 import OrdersViews from './views/OrdersViews';
 import "./components/home/home.css";
 import Serve from './components/serve/Serve';
+import OrdersDataBase from './components/dataBase/OrdersDataBase';
 
 function App() {
   const app = firebase.app();
@@ -52,7 +53,7 @@ function App() {
           <Serve/>
         </Route>
         <Route path="/boletas">
-          Boletas
+          <OrdersDataBase/>
         </Route>
 
       </Switch>
