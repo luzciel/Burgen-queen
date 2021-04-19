@@ -47,10 +47,6 @@ CRITERIOS DE ACEPTACION:
 - Ver los pedidos ordenados según se van haciendo.
 - Marcar los pedidos que se han preparado y están listos para servirse.
 
-<<<<<<< HEAD
-=======
-![inicio]()
->>>>>>> 1ed1d3f8d7ce08dbb888fdf3464bf54932d1a320
 
 
  [link a figma](https://www.figma.com/file/0JkcgY4HzZceeolodiG92U/Burger-Queen-colors?node-id=211%3A2) 
