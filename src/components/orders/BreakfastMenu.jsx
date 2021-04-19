@@ -28,13 +28,6 @@ const BreakfastMenu = (props) => {
   };
   
 
-  // //subcategorias  ****
-  // const subcategories = function (e) {
-  //   const option = e.target.value;
-  //   console.log(option);
-  //   setMenu(option);
-  // };
-
   return (
     <div className="container menus">
       <div className="breakfast-menu ">
