@@ -12,29 +12,22 @@ import firebase from "firebase/app";
 import Home from './components/home/Home.jsx';
 import Tables from './components/tables/Tables.jsx';
 import OrdersInputs from './components/orders/OrdersInputs.jsx';
-import Cocina from './components/kitchen/Kitchen.jsx';
+import Kitchen from './components/kitchen/Kitchen.jsx';
 import Header from './components/home/Header.jsx';
 import HomeViews from './views/HomeViews';
 import OrdersViews from './views/OrdersViews';
 import "./components/home/home.css";
+import Serve from './components/serve/Serve';
+import OrdersDataBase from './components/dataBase/OrdersDataBase';
 
 function App() {
   const app = firebase.app();
-  console.log(app);
   return (
     <Router>
     <div>
      <div>
       <Header />
-       {/* <NavLink to='/' activeClassName='active'>
-         Home
-       </NavLink>
-       <NavLink to="/mesas" >Mesas</NavLink>
-       <NavLink to='/cocina' activeClassName='active'>
-         Cocina
-       </NavLink> */}
      </div>
-      {/* <hr/> */}
       <Switch>
         <Route path="/" exact>
           <HomeViews />
@@ -45,13 +38,13 @@ function App() {
         <Route path="/orders/:numTable"
         component={OrdersViews} />
         <Route path="/cocina">
-          <Cocina />
+          <Kitchen/>
         </Route>
         <Route path="/servir">
-          servir
+          <Serve/>
         </Route>
         <Route path="/boletas">
-          Boletas
+          <OrdersDataBase/>
         </Route>
 
       </Switch>

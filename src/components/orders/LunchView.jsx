@@ -10,7 +10,6 @@ import circlePlus from '../../img/circlePlus.svg';
 const LunchView = ({item, cart, setCart}) => {
 
   const { producto, precio, id, cantidad,opcion, adicional} = item;
-  console.log(adicional)
   const iconDelete = <Icon icon={delete24Regular} style={{ color: '#ff0b0b', fontSize: '25px' }} />;
   const iconCirclePlus =  <img src={circlePlus} alt='iconCirclePlus' className='quantity-icon'></img>;
   const iconLess = <img src={less} alt='iconLess' className='quantity-icon'></img>;
@@ -49,6 +48,26 @@ const LunchView = ({item, cart, setCart}) => {
 
   //Multiplica el precio por la cantidad de productos
   const productSubTotal = precio * cantidad;
+   
+  //si el producto tiene adicional quiero que se muestren los adicionales (huevo-queso)
+  const showAdditional = () => {
+    if (item.adicional) {
+      return adicional.map ((value,index) => (
+        <div key={index} >
+         {value.adicional}
+        </div>
+       ))
+    }
+  }
+
+  //si el producto tiene opcion quiero que se muetre el producto + opcion, si no tiene opciones quiero que se muestre sólo producto
+   const showOptions = () => {
+     if (opcion){
+       return producto + " " + opcion;
+     }else{
+       return producto;
+     }
+   }
 
   return (
 
@@ -56,17 +75,8 @@ const LunchView = ({item, cart, setCart}) => {
       <tr>
         <th scope="row"><span onClick={() => deleteProduct()}>{iconDelete}</span></th>
         <td className='name-product' colSpan="2">
-          {producto + " " + opcion}
-
-          {
-            adicional.map ((value,index) => (
-             <div key={index} >
-              {value.adicional}
-             </div>
-            ))
-          }
-          
-          
+          {showOptions()}
+          {showAdditional() }
         </td>
         
         <td className='div-quantity'>

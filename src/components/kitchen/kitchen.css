@@ -1,0 +1,136 @@
+.container-orders{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 4%;
+    width: 100vw;
+    color: #817B7B;
+    font-size: 1.1rem;
+}
+
+.orders-body{
+    width: 100vw;
+    margin-top: 8%;
+    margin-left: 0;
+}
+
+.orders-body h1 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    color: #454040;
+    font-size: 3 rem;
+    font-size: 4vmin;
+    justify-content: center;
+    margin-bottom: 3%;
+    display: flex;
+}
+
+.kitchen {
+    background: #F7F7F7;
+    box-shadow: inset 0px 4px 4px rgb(0 0 0 / 25%);
+    border: 1px solid #CBCBCB;
+    box-sizing: border-box;
+    border-radius: 30px;
+    max-width: 25vw;
+    min-width: 22vw;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4%;
+    margin-right: 3%;
+    margin-left: 3%;
+    height: fit-content;
+
+}
+
+.container-name{
+    display: flex;
+    justify-content: center;
+
+}
+.container-detail-order{
+    padding-left: 5%;
+}
+
+.container-detail-order h5{
+    font-size: 1rem;
+}
+
+.container-detail-order hr {
+        position: inherit;
+        width: 93%;
+        left: 168px;
+        border: 0px solid rgba(0, 0, 0, 0.25);
+        margin-bottom: 2%;
+        margin-top: 2%;
+}
+
+
+.container-table-waiter {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 7%;
+}
+
+
+.container-product{
+    padding-left: 6%;
+}
+
+.container-product-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+.container p {
+    margin-bottom: 0;
+}
+
+.product-opcion{
+    font-style: italic;
+}
+
+.price {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 14px;
+    font-weight: bold;
+}
+.container-product-item hr{
+    position: inherit;
+    width: 93%;
+    left: 168px;
+    border: 0.5px  solid rgba(0, 0, 0, 0.25);
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.btn-order-list{
+    background: rgba(42, 200, 86, 0.88);
+    font-family: 'Poppins', sans-serif;
+    font-size: 89%;
+    color: #FFFFFF;
+    border-radius: 22px;
+    width: 129px;
+    height: 37px;
+    margin-top: 8%;
+}
+
+.btn-order-serve{
+    background: #D22704;
+    font-family: 'Poppins', sans-serif;
+    font-size: 89%;
+    color: #FFFFFF;
+    border-radius: 22px;
+    width: 114px;
+    height: 37px;
+    margin-top: 8%;
+}
+
+
+.btn-order-list:hover{
+    color: #817B7B;
+}

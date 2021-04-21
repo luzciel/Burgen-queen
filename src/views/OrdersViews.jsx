@@ -1,16 +1,21 @@
-import React from 'react'
-import "../components/orders/Orders.css"
-import MenuButtons from '../components/orders/MenuButtons'
-import BreakfastMenu from '../components/orders/BreakfastMenu'
-import OrdersInputs from '../components/orders/OrdersInputs'
-import LunchMenu from '../components/orders/LunchMenu'
-import OrderDetail from '../components/orders/OrderDetail'
+import React from 'react';
+import "../components/orders/Orders.css";
+import MenuButtons from '../components/orders/MenuButtons';
+import BreakfastMenu from '../components/orders/BreakfastMenu';
+import OrdersInputs from '../components/orders/OrdersInputs';
+import LunchMenu from '../components/orders/LunchMenu';
+import { db } from '../firebase.js';
+import OrderDetail from '../components/orders/OrderDetail';
 import LunchView from '../components/orders/LunchView';
-// import { db } from '../../firebase'
 
 
 
 const OrdersViews = (props) => {
+
+  const [clientNameState, setClientNameState] = React.useState("")
+  const [waiterNameState, setWaiterName] = React.useState("")
+
+
 
   const [btnDesayuno, setBtnDesayuno] = React.useState('Desayuno'); // estado del boton desayuno 
 
@@ -18,7 +23,7 @@ const OrdersViews = (props) => {
   const [showLunch, setShowLunch] = React.useState(false); // estado del menu Almuerzo inicializado en false
 
   // Funcion que cambia el estado showBreakfast (menu desayuno)
-  const toggleBreakfast = () => { 
+  const toggleBreakfast = () => {
     setshowBreakfast(true)
     setShowLunch(false)
   }
@@ -29,30 +34,54 @@ const OrdersViews = (props) => {
     setShowLunch(true)
   }
 
-  // // Funcion que agrega la colleccion a firebase
-  // const addCollectionOrders = async (product) => {
-  //   await db.collection('orders').doc().set(product)
-  //   console.log("NEW COLECTION")
-  // }
-  
+  // Funcion que agrega la colleccion a firebase
+  const addCollectionOrders = async (order) => {
+    const date = new Date();
+    const fecha = `${(`00${date.getDate()}`)
+      .slice(-2)}/${(`00${date.getMonth() + 1}`)
+        .slice(-2)}/${date.getFullYear()} ${(`00${date.getHours()}`)
+          .slice(-2)}:${(`00${date.getMinutes()}`)
+            .slice(-2)}:${(`00${date.getSeconds()}`)
+              .slice(-2)}`;
+    try {
+      const docRef = await db.collection('Orders').add({
+        dateOrder: fecha,
+        status: "En espera",
+        product: order,
+        clientName: clientNameState,
+        waiterName: waiterNameState,
+        tableNumber: props.match.params.numTable,
+      })
+
+    } catch (error) {
+      console.error("Error adding document: ", error);
+    }
+
+  };
+
   return (
     <div className="orders-container">
-        <OrdersInputs/>
-        <input type="text" className="tableNumber" placeholder="Mesa" value={`Mesa ${props.match.params.numTable}`} />
-        <hr className="hrOrders"></hr>
+      <OrdersInputs
+        clientName={clientNameState}
+        setClientName={setClientNameState}
+        waiterName={waiterNameState}
+        setWaiterName={setWaiterName} />
 
-        <MenuButtons  //propiedades del componente hijo (MenuButtons)
-         btnDesayuno={btnDesayuno}     
-         breakfastClick ={()=>{toggleBreakfast()}}  
-         lunchClick={()=>{toggleLunch()}}
-         /> 
+      <input type="text" className="tableNumber" placeholder="Mesa" value={`Mesa ${props.match.params.numTable}`} />
+      <hr className="hrOrders"></hr>
 
-        {showBreakfast ? <BreakfastMenu addCollectionOrders/> : <LunchMenu/> } {/* si showBreakfast es true se muestre el menu del desayuno y sino se muestre el menu del almuerzo  */}
+      <MenuButtons  //propiedades del componente hijo (MenuButtons)
+        btnDesayuno={btnDesayuno}
+        breakfastClick={() => { toggleBreakfast() }}
+        lunchClick={() => { toggleLunch() }}
+      />
 
-    
+      {showBreakfast ? <BreakfastMenu addCollectionFunction={addCollectionOrders} /> : <LunchMenu addCollectionFunction={addCollectionOrders} />} {/* si showBreakfast es true se muestre el menu del desayuno y sino se muestre el menu del almuerzo  */}
+
+
     </div>
 
-)
+  )
 
 }
 
@@ -92,11 +121,11 @@ export default OrdersViews
 // //             showLunch: false,
 
 // //         }
-      
+
 // //     }
 // //      //funcion toogle
 // //     toggleBreakfast(){   
-        
+
 // //         this.setState({showBreakfast: true}) //setState cambia los valores del estado 
 // //         this.setState({showLunch: false}) //setState cambia los valores del estad
 // //         // if(this.state.showBreakfast){
@@ -128,13 +157,13 @@ export default OrdersViews
 //         return (
 //             <div>
 //                 <OrdersInputs/>
-    
+
 //                 <MenuButtons  //propiedades del componente hijo (MenuButtons)
 //                  btnDesayuno={this.state.btnDesayuno}     
 //                  breakfastClick ={()=>{this.toggleBreakfast()}}  
 //                  lunchClick={()=>{this.toggleLunch()}}
 //                  /> 
-    
+
 //                  {breakfast} {/*estoy llamando la variable que declare en el linea 38 que es igual al valor del componente */}
 
 //                 {lunch}  {/*estoy llamando la variable que declare en el linea 45 que es igual al valor del componente */}
@@ -147,7 +176,7 @@ export default OrdersViews
 //                 </div>
 //                  */}
 //             </div>
-    
+
 //         )
 
 

@@ -10,7 +10,7 @@
 }*/
 
 .clientName{
-    margin: 82px -97px 0px 43px;
+    margin: 89px -97px 21px 603px;
     font-family: 'Poppins', sans-serif;
     border-radius: 5px;
     border: 3px solid #FE7800;
@@ -19,11 +19,10 @@
     height: 38px;
     padding: 15px;
     outline: none;
-
 }
 
 .waiterName{
-    margin: 82px 0px 0px 108px;
+    margin: 89px 103px 0px 191px;
     font-family: 'Poppins', sans-serif;
     border-radius: 5px;
     border: 3px solid #FE7800;
@@ -49,9 +48,9 @@
 }
 
 .hrOrders{
-    width: 1375px;
-    justify-content: center;
-    margin: 9px -106px 10px;
+  width: 98vw;
+  justify-content: center;
+  margin: 9px -153px 4px;
 
 
 }
@@ -59,7 +58,7 @@
 .btnBreakfast{
     width: 165.53px;
     height: 68.44px;
-    margin: 49px 21px 10px 127px;
+    margin: 49px 21px 10px 525px;
     box-shadow: 0 29px 39px -5px rgb(91 91 95 / 47%);
     border-radius: 20px;
     font-family: 'Poppins', sans-serif;
@@ -69,14 +68,15 @@
     transition-duration: 0.7s;
     cursor: pointer;
     border: 2px solid #D22704;
-    background-color: white; 
-    color: black;
+    background-color:#D22704;
+    color: white;
+    
 }
 
 .btnBreakfast:hover {
-    background-color:#D22704;
-    color: white;
-     
+    
+    background-color: white; 
+    color: black;
   }
 
 .btnLunch{
@@ -92,13 +92,15 @@
     transition-duration: 0.7s;
     cursor: pointer;
     border: 2px solid #D22704;
-    background-color: white; 
-    color: black; 
+    background-color:#D22704;
+    color: white;
+    
 }
 
 .btnLunch:hover {
-    background-color:#D22704;
-    color: white;
+    
+    background-color: white; 
+    color: black; 
   }
 
 
@@ -144,7 +146,7 @@
     width: 99.82px;
     border-style: unset;
     border-radius: 20px;
-    margin: -2px 0px 0px 77px;
+    margin: 7px 0px 0px 77px;
     box-shadow: 0 10px 14px -7px #5b5b5f;
   }
 
@@ -209,7 +211,8 @@
     box-shadow: 0 10px 14px -7px #5b5b5f;
     font-family: 'Poppins', sans-serif;
     border-radius: 20px;
-    margin: 6px 17px 15px 78px;
+    margin: 14px 17px 15px 78px;
+
 
   }
 
@@ -230,14 +233,39 @@
  }
 
  .form-select {
-  margin: -27px 0px 0px 73px;
-  width: 155px;
-  height: 37px;
+  width: 169px;
+  height: 35px;
   background-color: white;
   color: black;
   border-style: unset;
   box-shadow: 0 10px 14px -7px #5b5b5f;
   font-family: 'Poppins', sans-serif;
   border-radius: 20px;
-  margin: -43px 17px 15px 53px;
+  margin: -42px 17px 15px 48px;
+}
+
+
+/* formato responsive para table */  
+@media screen and (min-width: 415px)  and (max-width: 1024px){
+  .btnBreakfast{
+    margin: 49px 21px 10px 116px;
+  }
+
+  .clientName {
+    margin: 89px -97px 11px 60px;
+  }
+
+  .breakfast-cart{
+    width: 36vw;
+  }
+
+  .btn-cancel {
+    margin: 12px 12px 8px -22px;
+   }
+
+   .btn-send {
+    margin: 12px -20px 8px 13px;
+    width: 159px;
+    }
+
 }

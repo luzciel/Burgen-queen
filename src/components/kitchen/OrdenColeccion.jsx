@@ -2,7 +2,6 @@ import React from 'react';
 
 const OrderColleccion = (orderDetail, setOrderDetail, order) => {
 
-    console.log(55, order)
 
     return (
         <div className="">
@@ -17,9 +16,6 @@ const OrderColleccion = (orderDetail, setOrderDetail, order) => {
                     <hr />
                 </div>
             ))}</div>
-            {/* <h3></h3>
-             <h3></h3>
-             <h3></h3>    */}
             <button>Orden Lista</button>
         </div>              
     

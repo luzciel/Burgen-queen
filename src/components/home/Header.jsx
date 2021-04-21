@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import Logo from '../../img/logo.png'
 import App from '../../App'
 
-const Header = () =>{
+const Header = () => {
     return (
         <section id="particles-js" className="section home">
             <nav className="navbar navbar-expand-lg navbar-light fixed-top">
@@ -23,13 +23,13 @@ const Header = () =>{
                                 <NavLink className="nav-link" to="/mesas">Mesas</NavLink>
                             </li>
                             <li className="nav-item">
-                            <NavLink to='/cocina' className="nav-link">Cocina</NavLink>
+                                <NavLink to='/cocina' className="nav-link">Cocina</NavLink>
                             </li>
                             <li className="nav-item">
-                            <NavLink to='/servir' className="nav-link">Servir</NavLink>
+                                <NavLink to='/servir' className="nav-link">Servir</NavLink>
                             </li>
                             <li className="nav-item">
-                            <NavLink to='/servir' className="nav-link">Boletas</NavLink>
+                                <NavLink to='/boletas' className="nav-link">Boletas</NavLink>
                             </li>
                         </ul>
                     </div>

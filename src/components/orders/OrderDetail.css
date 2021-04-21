@@ -66,12 +66,19 @@
     font-weight: 800;
     color: #FFFFFF;
     border-radius: 22px;
-    width: 160px;
+    width: 158px;
 }
 
+.container-btn{
+    margin-bottom: 3%;
+    display: flex;
+    justify-content: center;
+}
 .btn-cancel{
     background: #D22704;
+    margin: 12px 15px 8px 10px;
 }
 .btn-send {
     background: rgba(42, 200, 86, 0.88);
+    margin: 12px 13px 8px 12px;
 }
