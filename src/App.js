@@ -22,21 +22,12 @@ import OrdersDataBase from './components/dataBase/OrdersDataBase';
 
 function App() {
   const app = firebase.app();
-  console.log(app);
   return (
     <Router>
     <div>
      <div>
       <Header />
-       {/* <NavLink to='/' activeClassName='active'>
-         Home
-       </NavLink>
-       <NavLink to="/mesas" >Mesas</NavLink>
-       <NavLink to='/cocina' activeClassName='active'>
-         Cocina
-       </NavLink> */}
      </div>
-      {/* <hr/> */}
       <Switch>
         <Route path="/" exact>
           <HomeViews />

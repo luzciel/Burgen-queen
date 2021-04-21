@@ -42,6 +42,9 @@
   "devDependencies": {
     "@iconify/icons-akar-icons": "^1.1.5",
     "@iconify/icons-fluent": "^1.1.9",
-    "@iconify/react": "^1.1.4"
+    "@iconify/react": "^1.1.4",
+    "eslint": "^7.23.0",
+    "eslint-config-eslint": "^7.0.0",
+    "eslint-config-google": "^0.14.0"
   }
 }

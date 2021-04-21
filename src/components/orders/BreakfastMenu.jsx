@@ -14,7 +14,7 @@ const BreakfastMenu = (props) => {
 
   const getData = async () => {
     const data = await fetch(
-      "https://luzciel.github.io/Burgen-queen/src/data/menu.json"
+      "https://luzciel.github.io/Burger-queen/src/data/menu.json"
     );
     const fullMenu = await data.json();
     setMenu(fullMenu.desayuno);
@@ -57,7 +57,6 @@ const BreakfastMenu = (props) => {
           status: "En espera",
           product: order,
         })
-        console.log("NEW COLECTION")
       } catch (error) {
         console.error("Error adding document: ", error);
       }

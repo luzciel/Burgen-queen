@@ -7,7 +7,7 @@ const Serve = () => {
     // Recupera la coleccion ReadyOrders de firebase
     const getReadyOrders = async () => {
         try {
-            await db.collection("readyOrders").onSnapshot((querySnapshot) => {
+            await db.collection("readyOrders").orderBy("dateEnd", "asc").onSnapshot((querySnapshot) => {
                 const orders = []
                 querySnapshot.forEach((doc) => {
                     orders.push({ ...doc.data(), id: doc.id });

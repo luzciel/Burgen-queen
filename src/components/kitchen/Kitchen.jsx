@@ -9,7 +9,7 @@ const Kitchen = () => {
     // Recupera la coleccion Orders de firebase
     const getOrders = async () => {
         try {
-            await db.collection("Orders").onSnapshot((querySnapshot) => {
+            await db.collection("Orders").orderBy("dateOrder", "asc").onSnapshot((querySnapshot) => {
                 const orders = []
                 querySnapshot.forEach((doc) => {
                     orders.push({ ...doc.data(), id: doc.id });
@@ -56,7 +56,6 @@ const Kitchen = () => {
     }
 
 
-    console.log(orderDetail)
     return (
         <Fragment>
             <div className="orders-body">
