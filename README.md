@@ -42,7 +42,7 @@ CRITERIOS DE ACEPTACION:
 
 Yo como jefx de cocina quiero ver los pedidos de los clientes en orden y marcar cuáles están listos para saber qué se debe cocinar y avisar a lxs meserxs que un pedido está listo para servirlo a un cliente.
 
-CRITERIOS DE ACEPTACION:
+#### CRITERIOS DE ACEPTACION:
 
 - Ver los pedidos ordenados según se van haciendo.
 - Marcar los pedidos que se han preparado y están listos para servirse.
